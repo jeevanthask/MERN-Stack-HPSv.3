@@ -1,4 +1,5 @@
 import React from "react";
+import AddpatientComponent from "../addpatient/addpatient.component";
 
 
 class DashboardComponent extends React.Component{
@@ -6,7 +7,7 @@ class DashboardComponent extends React.Component{
     render() {
         return(
             <div>
-                from the dashboard
+                <AddpatientComponent/>
             </div>
         )
     }
