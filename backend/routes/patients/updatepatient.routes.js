@@ -4,7 +4,7 @@ const bodyParser = require('body-parser')
 const cors = require('cors')
 const patientRoutes = express.Router()
 
-let Patient = require('../models/addstudent.model')
+let Patient = require('../../models/patient.model')
 
 app.use(cors())
 app.use(bodyParser.json())
