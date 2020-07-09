@@ -15,7 +15,6 @@ class DashboardComponent extends React.Component {
         this.props.history.push('/admin/patientlist')
     }
 
-
     render() {
         return (
             <div className="container">
