@@ -1,3 +1,8 @@
+.buttonstyle{
+    width: 12rem;
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
 
 .headingspan{
     padding: 30px;
@@ -6,8 +11,4 @@
     font-size: 2rem;
 
     display: inline-block;
-    animation: bounce;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-
 }

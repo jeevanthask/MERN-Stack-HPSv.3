@@ -1,12 +1,23 @@
 import React from "react";
 import style from './dashboard.module.css'
+import {Button} from "react-bootstrap";
 import AddpatientComponent from "../addpatient/addpatient.component";
 
 
-class DashboardComponent extends React.Component{
+class DashboardComponent extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {}
+    }
+
+    handlePatientList = () => {
+        this.props.history.push('/admin/patientlist')
+    }
+
 
     render() {
-        return(
+        return (
             <div className="container">
                 <div className="row">
                     <div className="col-md-12 text-center">
@@ -14,8 +25,21 @@ class DashboardComponent extends React.Component{
                     </div>
                 </div>
 
+                <div className="row">
+                    <div className="col-md-12">
+                        <AddpatientComponent/>
+                    </div>
+                </div>
 
-                <AddpatientComponent/>
+                <div className="row">
+                    <div className="col-md-12">
+                        <Button variant="primary" className={style.buttonstyle} onClick={this.handlePatientList}>
+                            Patient List
+                        </Button>
+                    </div>
+                </div>
+
+
             </div>
         )
     }
