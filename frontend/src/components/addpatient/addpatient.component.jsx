@@ -40,7 +40,7 @@ class AddpatientComponent extends React.Component {
 
                 <Modal show={this.state.show} onHide={this.handleClose}>
 
-                    <Modal.Header closeButton>
+                    <Modal.Header closeButton className = {style.modalheader}>
                         <Modal.Title>Add Student</Modal.Title>
                     </Modal.Header>
 
@@ -52,14 +52,19 @@ class AddpatientComponent extends React.Component {
                                 <Form.Control type="text"/>
                             </Form.Group>
 
-                            <Form.Group controlId="formBasicPassword">
+                            <Form.Group>
                                 <Form.Label>Last Name</Form.Label>
                                 <Form.Control type="text"/>
                             </Form.Group>
 
+                            <Form.Group>
+                                <Form.Label>Email</Form.Label>
+                                <Form.Control type="email"/>
+                            </Form.Group>
+
                             <Modal.Footer>
-                                <Button variant="primary" type="submit">
-                                    Submit
+                                <Button variant="primary" type="submit" className = {style.buttonstyle}>
+                                    Add Patient
                                 </Button>
                             </Modal.Footer>
 
