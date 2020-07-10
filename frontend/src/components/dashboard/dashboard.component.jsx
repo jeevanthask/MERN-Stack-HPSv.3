@@ -58,85 +58,91 @@ class DashboardComponent extends React.Component {
                     </div>
                 </div>
 
-                <div className="row">
-                    <div className="col-md-12">
-                        <CountersComponent/>
+                <div className="container">
+
+                    <div className="row">
+                        <div className="col-md-12">
+                            <CountersComponent/>
+                        </div>
                     </div>
+
+                    <div className="row">
+
+                        <div className="col-md-4">
+
+                            <div className="row">
+                                <div className="col-md-12">
+                                    <AddpatientComponent/>
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="col-md-12">
+                                    <Button variant="primary" className={style.buttonstyle} onClick={this.handlePatientList}>
+                                        Patient List
+                                    </Button>
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="col-md-12">
+                                    <Button variant="primary" className={style.buttonstyle} onClick={this.handleSearchPatient}>
+                                        Search Patient
+                                    </Button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="col-md-4">
+
+                            <div className="row">
+                                <div className="col-md-12">
+                                    <AdddoctorComponent/>
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="col-md-12">
+                                    <Button variant="primary" className={style.buttonstyle} onClick={this.handleDoctorList}>
+                                        Doctor List
+                                    </Button>
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="col-md-12">
+                                    <Button variant="primary" className={style.buttonstyle} onClick={this.handleSearchDoctor}>
+                                        Search Doctor
+                                    </Button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div className="col-md-4">
+
+                            <div className="row">
+                                <div className="col-md-12">
+                                    <AddsymptomComponent/>
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="col-md-12">
+                                    <Button variant="primary" className={style.buttonstyle} onClick={this.handleSymptomList}>
+                                        Symptom List
+                                    </Button>
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="col-md-12">
+                                    <Button variant="primary" className={style.buttonstyle} onClick={this.handleSearchSymptom}>
+                                        Search Symptom
+                                    </Button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
 
-                <div className="row">
 
-                    <div className="col-md-4">
-
-                        <div className="row">
-                            <div className="col-md-12">
-                                <AddpatientComponent/>
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="col-md-12">
-                                <Button variant="primary" className={style.buttonstyle} onClick={this.handlePatientList}>
-                                    Patient List
-                                </Button>
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="col-md-12">
-                                <Button variant="primary" className={style.buttonstyle} onClick={this.handleSearchPatient}>
-                                    Search Patient
-                                </Button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="col-md-4">
-
-                        <div className="row">
-                            <div className="col-md-12">
-                                <AdddoctorComponent/>
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="col-md-12">
-                                <Button variant="primary" className={style.buttonstyle} onClick={this.handleDoctorList}>
-                                    Doctor List
-                                </Button>
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="col-md-12">
-                                <Button variant="primary" className={style.buttonstyle} onClick={this.handleSearchDoctor}>
-                                    Search Doctor
-                                </Button>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div className="col-md-4">
-
-                        <div className="row">
-                            <div className="col-md-12">
-                                <AddsymptomComponent/>
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="col-md-12">
-                                <Button variant="primary" className={style.buttonstyle} onClick={this.handleSymptomList}>
-                                    Symptom List
-                                </Button>
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="col-md-12">
-                                <Button variant="primary" className={style.buttonstyle} onClick={this.handleSearchSymptom}>
-                                    Search Symptom
-                                </Button>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
 
 
                 <div className="row">
