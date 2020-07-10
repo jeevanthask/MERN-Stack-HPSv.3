@@ -5,6 +5,7 @@ import AddpatientComponent from "../addpatient/addpatient.component";
 import AdddoctorComponent from "../adddoctor/adddoctor.component";
 import AddsymptomComponent from "../addsymptom/addsymptom.component";
 import CountersComponent from "../counters/counters.component";
+import CommonsearchComponent from "../commonsearch/commonsearch.component";
 
 
 class DashboardComponent extends React.Component {
@@ -45,6 +46,12 @@ class DashboardComponent extends React.Component {
                 <div className="row">
                     <div className="col-md-12 text-center">
                         <span className={style.headingspan}>Health Prediction System</span>
+                    </div>
+                </div>
+
+                <div className="row">
+                    <div className="col-md-12">
+                        <CommonsearchComponent/>
                     </div>
                 </div>
 
