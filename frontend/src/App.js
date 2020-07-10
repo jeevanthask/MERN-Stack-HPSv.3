@@ -7,6 +7,9 @@ import UpdatedoctorComponent from "./components/updatedoctor/updatedoctor.compon
 import SymptomlistComponent from "./components/symptomslist/symptomlist.component";
 import UpdatesymptomComponent from "./components/updatesymptom/updatesymptom.component";
 import DoctorlistComponent from "./components/doctorlist/doctorlist.component";
+import SearchpatientComponent from "./components/searchpatient/searchpatient.component";
+import SearchdoctorComponent from "./components/searchdoctor/searchdoctor.component";
+import SearchsymptomComponent from "./components/searchsymptom/searchsymptom.component";
 
 class App extends React.Component{
 
@@ -22,6 +25,9 @@ class App extends React.Component{
                     <Route path='/admin/updatepatient/:id' exact component={UpdatepatientComponent}/>
                     <Route path='/admin/updatedoctor/:id' exact component={UpdatedoctorComponent}/>
                     <Route path='/admin/updatesymptom/:id' exact component={UpdatesymptomComponent}/>
+                    <Route path='/admin/searchpatient' exact component={SearchpatientComponent}/>
+                    <Route path='/admin/searchdoctor' exact component={SearchdoctorComponent}/>
+                    <Route path='/admin/searchsymptom' exact component={SearchsymptomComponent}/>
                     <Route path='/' render={() => <div>404</div>}/>
                 </Switch>
 
