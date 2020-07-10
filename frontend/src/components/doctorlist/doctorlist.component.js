@@ -34,7 +34,7 @@ class DoctorlistComponent extends React.Component {
     }
 
     doctorList = () => {
-        return this.state.patients.map(currentdoctor => {
+        return this.state.doctors.map(currentdoctor => {
             return (
                 <tr>
                     <td>{currentdoctor.firstname}</td>
@@ -42,7 +42,7 @@ class DoctorlistComponent extends React.Component {
                     <td>{currentdoctor.email}</td>
                     <td><Link to={"/admin/updatedoctor/" + currentdoctor._id}>Edit</Link></td>
                     <td>
-                        <button className="btn btn-danger" onClick={() => this.deletePatient(currentdoctor._id)}>
+                        <button className="btn btn-danger" onClick={() => this.deleteDoctor(currentdoctor._id)}>
                             Delete
                         </button>
                     </td>
@@ -79,4 +79,4 @@ class DoctorlistComponent extends React.Component {
 }
 
 
-export default PatientlistComponent
+export default DoctorlistComponent

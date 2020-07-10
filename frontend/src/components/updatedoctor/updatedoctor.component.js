@@ -1,14 +1,13 @@
 import React from "react";
-import style from './updatepatient.module.css'
+import style from './updatedoctor.module.css'
 import axios from 'axios'
 import {Button, Modal, Form} from "react-bootstrap";
 
-class UpdatepatientComponent extends React.Component {
+class UpdatedoctorComponent extends React.Component {
 
     constructor() {
         super();
         this.state = {
-            show: false,
             firstname: '',
             lastname: '',
             email: ''
@@ -35,7 +34,7 @@ class UpdatepatientComponent extends React.Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:4000/HPSvthree/admin/getpatient/' + this.props.match.params.id)
+        axios.get('http://localhost:4000/HPSvthree/admin/getdoctor/' + this.props.match.params.id)
             .then(response => {
                 this.setState({
                     firstname: response.data.firstname,
@@ -52,17 +51,14 @@ class UpdatepatientComponent extends React.Component {
     onSubmit = (e) => {
         e.preventDefault()
 
-        this.setState({
-            show: false
-        })
 
-        const newPatient = {
+        const newDoctor = {
             firstname: this.state.firstname,
             lastname: this.state.lastname,
             email: this.state.email
         }
 
-        axios.post('http://localhost:4000/HPSvthree/admin/updatepatient/' + this.props.match.params.id, newPatient)
+        axios.post('http://localhost:4000/HPSvthree/admin/updatedoctor/' + this.props.match.params.id, newDoctor)
             .then(res => console.log(res.data))
 
         this.setState({
@@ -94,7 +90,7 @@ class UpdatepatientComponent extends React.Component {
                     </Form.Group>
 
                     <Button variant="primary" type="submit" className = {style.buttonstyle}>
-                        Update Patient
+                        Update Doctor
                     </Button>
 
                 </Form>
@@ -104,4 +100,4 @@ class UpdatepatientComponent extends React.Component {
 
 }
 
-export default UpdatepatientComponent
+export default UpdatedoctorComponent
