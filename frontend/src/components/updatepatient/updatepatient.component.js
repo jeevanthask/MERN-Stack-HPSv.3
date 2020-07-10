@@ -34,6 +34,21 @@ class UpdatepatientComponent extends React.Component {
         })
     }
 
+    componentDidMount() {
+        axios.get('http://localhost:4000/HPSvthree/admin/getpatient/' + this.props.match.params.id)
+            .then(response => {
+                this.setState({
+                    firstname: response.data.firstname,
+                    lastname: response.data.lastname,
+                    email:response.data.email
+                })
+            })
+            .catch(function (error) {
+                console.log(error);
+
+            })
+    }
+
     onSubmit = (e) => {
         e.preventDefault()
 
