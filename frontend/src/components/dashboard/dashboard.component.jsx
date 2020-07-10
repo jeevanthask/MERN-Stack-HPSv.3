@@ -42,9 +42,16 @@ class DashboardComponent extends React.Component {
     render() {
         return (
             <div className="container">
+
                 <div className="row">
                     <div className="col-md-12 text-center">
                         <span className={style.headingspan}>Health Prediction Sytem</span>
+                    </div>
+                </div>
+
+                <div className="row">
+                    <div className="col-md-12">
+                        <CountersComponent/>
                     </div>
                 </div>
 
@@ -114,11 +121,6 @@ class DashboardComponent extends React.Component {
                     </div>
                 </div>
 
-                <div className="row">
-                    <div className="col-md-12">
-                        <CountersComponent/>
-                    </div>
-                </div>
 
 
 

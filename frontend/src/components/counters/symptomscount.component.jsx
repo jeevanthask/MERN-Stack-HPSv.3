@@ -18,7 +18,7 @@ class SymptomscountComponent extends React.Component {
                 <div className="row" style={{marginTop: 15}}>
                     <div className="col-md-12">
                         <div className="card text-white bg-primary mb-3">
-                            <div className="card-header text-center"><h4>Symptoms Count</h4></div>
+                            <div className="card-header text-center"><h6>Symptoms Count</h6></div>
                             <div className="card-body">
                                 <h5 className="card-title text-center">
                                     <CountUp start={0}
