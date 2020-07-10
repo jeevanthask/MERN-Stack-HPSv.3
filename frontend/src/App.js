@@ -10,6 +10,7 @@ import DoctorlistComponent from "./components/doctorlist/doctorlist.component";
 import SearchpatientComponent from "./components/searchpatient/searchpatient.component";
 import SearchdoctorComponent from "./components/searchdoctor/searchdoctor.component";
 import SearchsymptomComponent from "./components/searchsymptom/searchsymptom.component";
+import NavbarComponent from "./components/navbar/navbar.component";
 
 class App extends React.Component{
 
@@ -17,7 +18,10 @@ class App extends React.Component{
         return(
             <BrowserRouter>
 
+                <NavbarComponent/>
+
                 <Switch>
+
                     <Route path='/' exact component={DashboardComponent}/>
                     <Route path='/admin/patientlist' exact component={PatientlistComponent}/>
                     <Route path='/admin/doctorlist' exact component={DoctorlistComponent}/>

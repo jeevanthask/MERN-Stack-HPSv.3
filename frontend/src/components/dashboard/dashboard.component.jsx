@@ -6,6 +6,7 @@ import AdddoctorComponent from "../adddoctor/adddoctor.component";
 import AddsymptomComponent from "../addsymptom/addsymptom.component";
 import PatientcounterComponent from "../counters/patientcounter.component";
 import CountersComponent from "../counters/counters.component";
+import NavbarComponent from "../navbar/navbar.component";
 
 
 class DashboardComponent extends React.Component {
@@ -41,7 +42,7 @@ class DashboardComponent extends React.Component {
 
     render() {
         return (
-            <div className="container">
+            <div className="container-fluid">
 
                 <div className="row">
                     <div className="col-md-12 text-center">
