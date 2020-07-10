@@ -2,6 +2,7 @@ import React from "react";
 import style from './dashboard.module.css'
 import {Button} from "react-bootstrap";
 import AddpatientComponent from "../addpatient/addpatient.component";
+import AdddoctorComponent from "../adddoctor/adddoctor.component";
 
 
 class DashboardComponent extends React.Component {
@@ -27,6 +28,12 @@ class DashboardComponent extends React.Component {
                 <div className="row">
                     <div className="col-md-12">
                         <AddpatientComponent/>
+                    </div>
+                </div>
+
+                <div className="row">
+                    <div className="col-md-12">
+                        <AdddoctorComponent/>
                     </div>
                 </div>
 

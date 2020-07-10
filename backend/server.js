@@ -20,6 +20,16 @@ app.use('/HPSvthree/admin',require('./routes/patients/getpatient.routes'))
 app.use('/HPSvthree/admin',require('./routes/patients/updatepatient.routes'))
 app.use('/HPSvthree/admin',require('./routes/patients/deletepatient.routes'))
 
+app.use('/HPSvthree/admin',require('./routes/doctors/adddoctor.routes'))
+app.use('/HPSvthree/admin',require('./routes/doctors/getdoctor.routes'))
+app.use('/HPSvthree/admin',require('./routes/doctors/updatedoctor.routes'))
+app.use('/HPSvthree/admin',require('./routes/doctors/deletedoctor.routes'))
+
+app.use('/HPSvthree/admin',require('./routes/symptoms/addsymptom.routes'))
+app.use('/HPSvthree/admin',require('./routes/symptoms/getsymptom.routes'))
+app.use('/HPSvthree/admin',require('./routes/symptoms/updatesymptom.routes'))
+app.use('/HPSvthree/admin',require('./routes/symptoms/deletesymptom.routes'))
+
 
 app.listen(PORT, function () {
     console.log('server is running in port ' + PORT)
