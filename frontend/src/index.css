@@ -5,6 +5,15 @@
   margin: 0;
 }
 
+html, body { height: 100%; }
+
 body{
   font-family: 'Roboto', sans-serif;
+
+  background-image: url('./assets/images/board-bread.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-color: #FAFAFA;
 }
