@@ -21,6 +21,10 @@ class DashboardComponent extends React.Component {
         this.props.history.push('/admin/doctorlist')
     }
 
+    handleSymptomList = () => {
+        this.props.history.push('/admin/symptomlist')
+    }
+
     render() {
         return (
             <div className="container">
@@ -63,6 +67,15 @@ class DashboardComponent extends React.Component {
                         </Button>
                     </div>
                 </div>
+
+                <div className="row">
+                    <div className="col-md-12">
+                        <Button variant="primary" className={style.buttonstyle} onClick={this.handleSymptomList}>
+                            Symptom List
+                        </Button>
+                    </div>
+                </div>
+
 
 
             </div>

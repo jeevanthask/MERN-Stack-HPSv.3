@@ -33,7 +33,7 @@ class PatientlistComponent extends React.Component {
             })
     }
 
-    studentList = () => {
+    patientList = () => {
         return this.state.patients.map(currentpatient => {
             return (
                 <tr>
@@ -68,7 +68,7 @@ class PatientlistComponent extends React.Component {
                     <tbody>
 
                     {
-                        this.studentList()
+                        this.patientList()
                     }
 
                     </tbody>
