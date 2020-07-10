@@ -1,34 +1,29 @@
 import React from "react";
 import CountUp from 'react-countup';
+import {Card} from "react-bootstrap";
 
 class DoctorcounterComponent extends React.Component {
 
     constructor() {
         super();
-        this.state = {
-        }
+        this.state = {}
     }
 
     render() {
         return (
             <div>
 
-                <div className="row">
-                    <div className="col-md-12">
-                        <div className="card text-white bg-primary mb-3">
-                            <div className="card-header text-center"><h6>Doctor Count</h6></div>
-                            <div className="card-body">
-                                <h5 className="card-title text-center">
-                                    <CountUp start={0}
-                                             end={50}
-                                             duration={15} separator=","
-                                    />
-                                </h5>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
+                <Card bg="danger" border="primary" style={{width: '18rem'}}>
+                    <Card.Header className="text-center"><h5>Doctors Count</h5></Card.Header>
+                    <Card.Body>
+                        <Card.Title className="text-center">
+                            <CountUp start={0}
+                                     end={50}
+                                     duration={15} separator=","
+                            />
+                        </Card.Title>
+                    </Card.Body>
+                </Card>
 
 
             </div>
