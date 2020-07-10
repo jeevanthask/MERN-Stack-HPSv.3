@@ -14,6 +14,7 @@ class App extends React.Component{
                     <Route path='/' exact component={DashboardComponent}/>
                     <Route path='/admin/patientlist' exact component={PatientlistComponent}/>
                     <Route path='/admin/updatepatient/:id' exact component={UpdatepatientComponent}/>
+                    <Route path='/admin/updatedoctor/:id' exact component={}/>
                     <Route path='/' render={() => <div>404</div>}/>
                 </Switch>
 
