@@ -54,7 +54,7 @@ class DoctorlistComponent extends React.Component {
     render() {
 
         return (
-            <div>
+            <div  className="container" style={{marginTop:'2rem'}}>
                 <Table striped bordered hover>
                     <thead>
                     <tr>
