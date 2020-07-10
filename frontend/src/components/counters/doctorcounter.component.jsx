@@ -11,7 +11,7 @@ class DoctorcounterComponent extends React.Component {
 
     render() {
         return (
-            <div className="p-3">
+            <div>
 
                 <div className="row">
                     <div className="col-md-12">
