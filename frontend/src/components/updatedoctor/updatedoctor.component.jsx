@@ -1,7 +1,7 @@
 import React from "react";
 import style from './updatedoctor.module.css'
 import axios from 'axios'
-import {Button, Modal, Form} from "react-bootstrap";
+import {Button, Form} from "react-bootstrap";
 
 class UpdatedoctorComponent extends React.Component {
 
@@ -39,7 +39,7 @@ class UpdatedoctorComponent extends React.Component {
                 this.setState({
                     firstname: response.data.firstname,
                     lastname: response.data.lastname,
-                    email:response.data.email
+                    email: response.data.email
                 })
             })
             .catch(function (error) {
@@ -71,25 +71,28 @@ class UpdatedoctorComponent extends React.Component {
 
     render() {
         return (
-            <div>
-                <Form onSubmit={this.onSubmit}>
+            <div className="container">
+                <Form onSubmit={this.onSubmit} className={style.formstyle}>
 
                     <Form.Group>
                         <Form.Label>First Name</Form.Label>
-                        <Form.Control type="text" value={this.state.firstname} onChange={this.onChangeFirstName}/>
+                        <Form.Control type="text" className={style.textboxstyle} value={this.state.firstname}
+                                      onChange={this.onChangeFirstName}/>
                     </Form.Group>
 
                     <Form.Group>
                         <Form.Label>Last Name</Form.Label>
-                        <Form.Control type="text" value={this.state.lastname} onChange={this.onChangeLastName}/>
+                        <Form.Control type="text" className={style.textboxstyle} value={this.state.lastname}
+                                      onChange={this.onChangeLastName}/>
                     </Form.Group>
 
                     <Form.Group>
                         <Form.Label>Email</Form.Label>
-                        <Form.Control type="email" value={this.state.email} onChange={this.onChangeEmail}/>
+                        <Form.Control type="email" className={style.textboxstyle} value={this.state.email}
+                                      onChange={this.onChangeEmail}/>
                     </Form.Group>
 
-                    <Button variant="primary" type="submit" className = {style.buttonstyle}>
+                    <Button variant="primary" type="submit" className={style.buttonstyle}>
                         Update Doctor
                     </Button>
 

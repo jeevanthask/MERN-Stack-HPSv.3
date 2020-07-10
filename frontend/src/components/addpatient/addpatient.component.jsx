@@ -79,7 +79,7 @@ class AddpatientComponent extends React.Component {
                 <Modal show={this.state.show} onHide={this.handleClose}>
 
                     <Modal.Header closeButton className = {style.modalheader}>
-                        <Modal.Title>Add Student</Modal.Title>
+                        <Modal.Title>Add Patient</Modal.Title>
                     </Modal.Header>
 
                     <Modal.Body>

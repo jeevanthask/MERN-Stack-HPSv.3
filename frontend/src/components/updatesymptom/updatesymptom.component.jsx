@@ -1,7 +1,7 @@
 import React from "react";
 import style from './updatesymptom.module.css'
 import axios from 'axios'
-import {Button, Modal, Form} from "react-bootstrap";
+import {Button, Form} from "react-bootstrap";
 
 class UpdatesymptomComponent extends React.Component {
 
@@ -75,22 +75,22 @@ class UpdatesymptomComponent extends React.Component {
 
     render() {
         return (
-            <div>
-                <Form onSubmit={this.onSubmit}>
+            <div className="container">
+                <Form onSubmit={this.onSubmit} className = {style.formstyle}>
 
                     <Form.Group>
                         <Form.Label>First Name</Form.Label>
-                        <Form.Control type="text" value={this.state.firstname} onChange={this.onChangeFirstName}/>
+                        <Form.Control className = {style.textboxstyle} type="text" value={this.state.firstname} onChange={this.onChangeFirstName}/>
                     </Form.Group>
 
                     <Form.Group>
                         <Form.Label>Last Name</Form.Label>
-                        <Form.Control type="text" value={this.state.lastname} onChange={this.onChangeLastName}/>
+                        <Form.Control className = {style.textboxstyle} type="text" value={this.state.lastname} onChange={this.onChangeLastName}/>
                     </Form.Group>
 
                     <Form.Group>
                         <Form.Label>Description</Form.Label>
-                        <Form.Control type="text" value={this.state.description} onChange={this.onChangeDescription}/>
+                        <Form.Control className = {style.textboxstyle} type="text" value={this.state.description} onChange={this.onChangeDescription}/>
                     </Form.Group>
 
                     <Button variant="primary" type="submit" className={style.buttonstyle}>

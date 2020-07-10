@@ -4,8 +4,6 @@ import DashboardComponent from "./components/dashboard/dashboard.component";
 import PatientlistComponent from "./components/patientlist/patientlist.component";
 import UpdatepatientComponent from "./components/updatepatient/updatepatient.component";
 import UpdatedoctorComponent from "./components/updatedoctor/updatedoctor.component";
-
-
 import SymptomlistComponent from "./components/symptomslist/symptomlist.component";
 import UpdatesymptomComponent from "./components/updatesymptom/updatesymptom.component";
 import DoctorlistComponent from "./components/doctorlist/doctorlist.component";
