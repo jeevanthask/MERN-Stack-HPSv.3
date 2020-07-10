@@ -25,6 +25,18 @@ class DashboardComponent extends React.Component {
         this.props.history.push('/admin/symptomlist')
     }
 
+    handleSearchPatient = () => {
+        this.props.history.push('/admin/searchpatient')
+    }
+
+    handleSearchSymptom = () => {
+        this.props.history.push('/admin/searchsymptom')
+    }
+
+    handleSearchDoctor = () => {
+        this.props.history.push('/admin/searchdoctor')
+    }
+
     render() {
         return (
             <div className="container">
@@ -72,6 +84,30 @@ class DashboardComponent extends React.Component {
                     <div className="col-md-12">
                         <Button variant="primary" className={style.buttonstyle} onClick={this.handleSymptomList}>
                             Symptom List
+                        </Button>
+                    </div>
+                </div>
+
+                <div className="row">
+                    <div className="col-md-12">
+                        <Button variant="primary" className={style.buttonstyle} onClick={this.handleSearchPatient}>
+                            Search Patient
+                        </Button>
+                    </div>
+                </div>
+
+                <div className="row">
+                    <div className="col-md-12">
+                        <Button variant="primary" className={style.buttonstyle} onClick={this.handleSearchDoctor}>
+                            Search Doctor
+                        </Button>
+                    </div>
+                </div>
+
+                <div className="row">
+                    <div className="col-md-12">
+                        <Button variant="primary" className={style.buttonstyle} onClick={this.handleSearchSymptom}>
+                            Search Symptom
                         </Button>
                     </div>
                 </div>
