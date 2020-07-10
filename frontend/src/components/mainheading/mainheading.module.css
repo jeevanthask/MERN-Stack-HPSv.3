@@ -1,0 +1,12 @@
+.headingspan{
+
+    padding: 30px;
+    text-align: center;
+    color: crimson;
+    font-size: 2rem;
+
+    display: inline-block;
+
+    animation: bounce;
+    animation-duration: 2s;
+}
