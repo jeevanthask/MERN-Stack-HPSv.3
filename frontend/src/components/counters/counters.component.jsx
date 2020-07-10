@@ -1,5 +1,4 @@
 import React from "react";
-import style from './counters.module.css'
 import PatientcounterComponent from "./patientcounter.component";
 import DoctorcounterComponent from "./doctorcounter.component";
 import SymptomscountComponent from "./symptomscount.component";

@@ -8,7 +8,6 @@ class SymptomscountComponent extends React.Component {
         this.state = {}
     }
 
-
     render() {
 
         return (
@@ -16,7 +15,7 @@ class SymptomscountComponent extends React.Component {
 
                 <div className="row">
                     <div className="col-md-12">
-                        <div className="card text-white bg-primary mb-3">
+                        <div className="card text-white bg-danger mb-3">
                             <div className="card-header text-center"><h6>Symptoms Count</h6></div>
                             <div className="card-body">
                                 <h5 className="card-title text-center">

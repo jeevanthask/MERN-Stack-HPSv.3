@@ -122,6 +122,11 @@ class DashboardComponent extends React.Component {
                 </div>
 
 
+                <div className="row">
+                    <div className="col-md-12">
+                        <br/><br/><br/><br/>
+                    </div>
+                </div>
 
 
             </div>
