@@ -4,6 +4,7 @@ import {Button} from "react-bootstrap";
 import AddpatientComponent from "../addpatient/addpatient.component";
 import AdddoctorComponent from "../adddoctor/adddoctor.component";
 import AddsymptomComponent from "../addsymptom/addsymptom.component";
+import PatientcounterComponent from "../counters/patientcounter.component";
 
 
 class DashboardComponent extends React.Component {
@@ -109,6 +110,12 @@ class DashboardComponent extends React.Component {
                         <Button variant="primary" className={style.buttonstyle} onClick={this.handleSearchSymptom}>
                             Search Symptom
                         </Button>
+                    </div>
+                </div>
+
+                <div className="row">
+                    <div className="col-md-12">
+                        <PatientcounterComponent/>
                     </div>
                 </div>
 
