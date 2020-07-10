@@ -4,9 +4,7 @@ import {Button} from "react-bootstrap";
 import AddpatientComponent from "../addpatient/addpatient.component";
 import AdddoctorComponent from "../adddoctor/adddoctor.component";
 import AddsymptomComponent from "../addsymptom/addsymptom.component";
-import PatientcounterComponent from "../counters/patientcounter.component";
 import CountersComponent from "../counters/counters.component";
-import NavbarComponent from "../navbar/navbar.component";
 
 
 class DashboardComponent extends React.Component {
@@ -46,7 +44,7 @@ class DashboardComponent extends React.Component {
 
                 <div className="row">
                     <div className="col-md-12 text-center">
-                        <span className={style.headingspan}>Health Prediction Sytem</span>
+                        <span className={style.headingspan}>Health Prediction System</span>
                     </div>
                 </div>
 
