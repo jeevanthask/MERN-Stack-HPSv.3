@@ -5,6 +5,7 @@ import AddpatientComponent from "../addpatient/addpatient.component";
 import AdddoctorComponent from "../adddoctor/adddoctor.component";
 import AddsymptomComponent from "../addsymptom/addsymptom.component";
 import PatientcounterComponent from "../counters/patientcounter.component";
+import CountersComponent from "../counters/counters.component";
 
 
 class DashboardComponent extends React.Component {
@@ -115,7 +116,7 @@ class DashboardComponent extends React.Component {
 
                 <div className="row">
                     <div className="col-md-12">
-                        <PatientcounterComponent/>
+                        <CountersComponent/>
                     </div>
                 </div>
 

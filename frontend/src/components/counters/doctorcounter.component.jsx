@@ -1,7 +1,7 @@
 import React from "react";
 import CountUp from 'react-countup';
 
-class PatientcounterComponent extends React.Component {
+class DoctorcounterComponent extends React.Component {
 
     constructor() {
         super();
@@ -9,16 +9,14 @@ class PatientcounterComponent extends React.Component {
         }
     }
 
-
     render() {
-
         return (
             <div className="p-3" style={{backgroundColor: '#FFFFFF'}}>
 
                 <div className="row" style={{marginTop: 15}}>
                     <div className="col-md-12">
                         <div className="card text-white bg-primary mb-3">
-                            <div className="card-header text-center"><h4>Total Cases</h4></div>
+                            <div className="card-header text-center"><h4>Doctor Count</h4></div>
                             <div className="card-body">
                                 <h5 className="card-title text-center">
                                     <CountUp start={0}
@@ -37,4 +35,4 @@ class PatientcounterComponent extends React.Component {
     }
 }
 
-export default PatientcounterComponent
+export default DoctorcounterComponent
