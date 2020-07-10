@@ -6,6 +6,7 @@ import UpdatepatientComponent from "./components/updatepatient/updatepatient.com
 import UpdatedoctorComponent from "./components/updatedoctor/updatedoctor.component";
 import DoctorlistComponent from "./components/doctorlist/doctorlist.component";
 import SymptomlistComponent from "./components/symptomslist/symptomlist.component";
+import UpdatesymptomComponent from "./components/updatesymptom/updatesymptom.component";
 
 class App extends React.Component{
 
@@ -20,6 +21,7 @@ class App extends React.Component{
                     <Route path='/admin/symptomlist' exact component={SymptomlistComponent}/>
                     <Route path='/admin/updatepatient/:id' exact component={UpdatepatientComponent}/>
                     <Route path='/admin/updatedoctor/:id' exact component={UpdatedoctorComponent}/>
+                    <Route path='/admin/updatesymptom/:id' exact component={UpdatesymptomComponent}/>
                     <Route path='/' render={() => <div>404</div>}/>
                 </Switch>
 
