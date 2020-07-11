@@ -30,6 +30,11 @@ app.use('/HPSvthree/admin',require('./routes/symptoms/getsymptom.routes'))
 app.use('/HPSvthree/admin',require('./routes/symptoms/updatesymptom.routes'))
 app.use('/HPSvthree/admin',require('./routes/symptoms/deletesymptom.routes'))
 
+app.use('/HPSvthree/admin',require('./routes/diseases/adddisease.routes'))
+app.use('/HPSvthree/admin',require('./routes/diseases/getdisease.routes'))
+app.use('/HPSvthree/admin',require('./routes/diseases/updatedisease.routes'))
+app.use('/HPSvthree/admin',require('./routes/diseases/deletedisease.routes'))
+
 app.use('/HPSvthree/admin',require('./routes/admins/getadmin.route'))
 
 
