@@ -11,28 +11,35 @@ class ChartrenderComponent extends React.Component{
         return(
             <div className="container" style={{marginTop:'5rem'}}>
 
-                <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
-                    <Tab eventKey="doctorproficiency" title="doctorproficiency">
-                        <div>
-                            <DoctorproficiencychartComponent/>
-                        </div>
-                    </Tab>
-                    <Tab eventKey="mostpopulardisese" title="mostpopulardisese">
-                        <div>
-                            <MostpopulardiseaseschartComponent/>
-                        </div>
-                    </Tab>
-                    <Tab eventKey="patientsgender" title="patients gender">
-                        <div>
-                            <PatientsgenderchartComponent/>
-                        </div>
-                    </Tab>
-                    <Tab eventKey="popular sympotoms" title="popular symptoms">
-                        <div>
-                            <PopularsymptomschartComponent/>
-                        </div>
-                    </Tab>
-                </Tabs>
+                <div className="alert alert-light" role="alert">
+
+                    <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
+                        <Tab eventKey="doctorproficiency" title="doctorproficiency">
+                            <div>
+                                <DoctorproficiencychartComponent/>
+                            </div>
+                        </Tab>
+                        <Tab eventKey="mostpopulardisese" title="mostpopulardisese">
+                            <div>
+                                <MostpopulardiseaseschartComponent/>
+                            </div>
+                        </Tab>
+                        <Tab eventKey="patientsgender" title="patients gender">
+                            <div>
+                                <PatientsgenderchartComponent/>
+                            </div>
+                        </Tab>
+                        <Tab eventKey="popular sympotoms" title="popular symptoms">
+                            <div>
+                                <PopularsymptomschartComponent/>
+                            </div>
+                        </Tab>
+                    </Tabs>
+
+                </div>
+
+
+
 
             </div>
 
