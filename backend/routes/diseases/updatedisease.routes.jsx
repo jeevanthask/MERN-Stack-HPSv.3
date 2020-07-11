@@ -2,31 +2,31 @@ const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
 const cors = require('cors')
-const doctorRoutes = express.Router()
+const diseaseRoutes = express.Router()
 
-let Doctor = require('../../models/doctor.model')
+let Disease = require('../../models/disease.model')
 
 app.use(cors())
 app.use(bodyParser.json())
 
-doctorRoutes.route('/updatedoctor/:id').post(function (req, res) {
-    Doctor.findById(req.params.id, function (err, doctor) {
-        if (!doctor) {
+diseaseRoutes.route('/updatedisease/:id').post(function (req, res) {
+    Disease.findById(req.params.id, function (err, disease) {
+        if (!disease) {
             res.status(404).send('data is not found')
         } else {
-            doctor.firstname = req.body.firstname
-            doctor.lastname = req.body.lastname
-            doctor.email = req.body.email
+            disease.firstname = req.body.firstname
+            disease.lastname = req.body.lastname
+            disease.description = req.body.description
 
-            doctor.save().then(todo => {
-                res.json('doctor updated')
+            disease.save().then(todo => {
+                res.json('disease updated')
             })
                 .catch(err => {
-                    res.status(404).send('doctor not updated')
+                    res.status(404).send('disease not updated')
                 })
         }
     })
 })
 
 
-module.exports = doctorRoutes
+module.exports = diseaseRoutes

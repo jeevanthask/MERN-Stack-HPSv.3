@@ -2,24 +2,24 @@ const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
 const cors = require('cors')
-const doctorRoutes = express.Router()
+const diseaseRoutes = express.Router()
 
-let Doctor = require('../../models/doctor.model')
+let Disease = require('../../models/disease.model')
 
 app.use(cors())
 app.use(bodyParser.json())
 
-doctorRoutes.route('/adddoctor').post(function (req, res) {
-    let doctor = new Doctor(req.body);
-    doctor.save()
-        .then(newdoctor => {
-            res.status(200).json({'newdoctor': 'new doctor added successfully'})
+diseaseRoutes.route('/adddisease').post(function (req, res) {
+    let disease = new Disease(req.body);
+    disease.save()
+        .then(newdisease => {
+            res.status(200).json({'newdisease': 'new disease added successfully'})
         })
         .catch(err => {
-            res.status(400).send('adding new doctor failed')
+            res.status(400).send('adding new disease failed')
         })
 });
 
 
-module.exports = doctorRoutes
+module.exports = diseaseRoutes
 
