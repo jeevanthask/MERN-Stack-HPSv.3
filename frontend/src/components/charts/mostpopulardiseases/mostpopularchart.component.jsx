@@ -1,5 +1,5 @@
 import React from 'react'
-import {Doughnut} from 'react-chartjs-2';
+import {Bubble, Doughnut, Polar} from 'react-chartjs-2';
 
 class MostpopularchartComponent extends React.Component {
 
@@ -14,11 +14,16 @@ class MostpopularchartComponent extends React.Component {
                         label: 'symptoms cha later',
                         data: [
                             81,
-                            19
+                            19,
+                            34,45,56,67
                         ],
                         backgroundColor: [
                             '#33691e',
                             '#ff9800',
+                            '#33691e',
+                            '#0091ea',
+                            '#76ff03',
+                            '#f50057'
 
                         ],
                         borderColor: [
@@ -39,7 +44,7 @@ class MostpopularchartComponent extends React.Component {
 
                         <h4>Most popular Disesases</h4>
 
-                        <Doughnut
+                        <Polar
                             data={this.state.chartData}
                             options={{
                                 title: {
