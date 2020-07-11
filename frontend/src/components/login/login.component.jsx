@@ -1,6 +1,7 @@
 import React from "react";
 import style from './login.module.css'
 import img from '../../assets/images/avatar.png'
+import axios from "axios";
 
 class LoginComponent extends React.Component {
 
@@ -8,9 +9,22 @@ class LoginComponent extends React.Component {
         super();
 
         this.state = {
+            admins: [],
             username: '',
             password: ''
         }
+    }
+
+    componentDidMount() {
+        axios.get('http://localhost:4000/HPSvthree/admin/getadmins')
+            .then(response => {
+                this.setState({
+                    admins: response.data
+                })
+            })
+            .catch(function (error) {
+                console.log(error);
+            })
     }
 
     onChangeUserName = (e) => {
@@ -26,8 +40,12 @@ class LoginComponent extends React.Component {
     }
 
     onSubmit = (e) => {
+        /*if ((this.state.admins[0].username === this.state.username) && (this.state.admins[0].password === this.state.password)) {
+            this.props.history.push('/dashboard')
+        } else {
+            alert("Username or Password is incorrect")
+        }*/
         this.props.history.push('/dashboard')
-
 
     }
 
