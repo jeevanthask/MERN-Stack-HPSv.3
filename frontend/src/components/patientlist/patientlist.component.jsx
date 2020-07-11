@@ -36,11 +36,12 @@ class PatientlistComponent extends React.Component {
     patientList = () => {
         return this.state.patients.map(currentpatient => {
             return (
-                <tr>
+                <tr className="text-center">
                     <td>{currentpatient.firstname}</td>
                     <td>{currentpatient.lastname}</td>
                     <td>{currentpatient.email}</td>
-                    <td><Link to={"/admin/updatepatient/" + currentpatient._id}>Edit</Link></td>
+                    <td><Link to={"/admin/updatepatient/" + currentpatient._id}><i
+                        className="fa fa-pencil-square-o btn btn-primary m-2" aria-hidden="true"></i></Link></td>
                     <td>
                         <i className="fa fa-trash btn btn-danger " aria-hidden="true"
                            onClick={() => this.deletePatient(currentpatient._id)}></i>
@@ -56,7 +57,7 @@ class PatientlistComponent extends React.Component {
             <div className="container" style={{marginTop: '2rem'}}>
                 <Table striped bordered hover variant="primary">
                     <thead>
-                    <tr>
+                    <tr className="text-center">
                         <th>First Name</th>
                         <th>Last Name</th>
                         <th>Email</th>

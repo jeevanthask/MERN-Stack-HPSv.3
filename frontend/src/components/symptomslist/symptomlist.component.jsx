@@ -36,15 +36,15 @@ class SymptomlistComponent extends React.Component {
     symptomList = () => {
         return this.state.symptoms.map(currentsymptom => {
             return (
-                <tr>
+                <tr className="text-center">
                     <td>{currentsymptom.firstname}</td>
                     <td>{currentsymptom.lastname}</td>
                     <td>{currentsymptom.description}</td>
-                    <td><Link to={"/admin/updatesymptom/" + currentsymptom._id}>Edit</Link></td>
+                    <td><Link to={"/admin/updatesymptom/" + currentsymptom._id}><i
+                        className="fa fa-pencil-square-o btn btn-primary m-2" aria-hidden="true"></i></Link></td>
                     <td>
-                        <button className="btn btn-danger" onClick={() => this.deleteSymptom(currentsymptom._id)}>
-                            Delete
-                        </button>
+                        <i className="fa fa-trash btn btn-danger " aria-hidden="true"
+                           onClick={() => this.deleteSymptom(currentsymptom._id)}></i>
                     </td>
                 </tr>
             )
@@ -55,9 +55,9 @@ class SymptomlistComponent extends React.Component {
 
         return (
             <div className="container" style={{marginTop: '2rem'}}>
-                <Table striped bordered hover>
+                <Table striped bordered hover variant="primary">
                     <thead>
-                    <tr>
+                    <tr className="text-center">
                         <th>First Name</th>
                         <th>Last Name</th>
                         <th>Description</th>

@@ -36,15 +36,15 @@ class DoctorlistComponent extends React.Component {
     doctorList = () => {
         return this.state.doctors.map(currentdoctor => {
             return (
-                <tr>
+                <tr className="text-center">
                     <td>{currentdoctor.firstname}</td>
                     <td>{currentdoctor.lastname}</td>
                     <td>{currentdoctor.email}</td>
-                    <td><Link to={"/admin/updatedoctor/" + currentdoctor._id}>Edit</Link></td>
+                    <td><Link to={"/admin/updatedoctor/" + currentdoctor._id}><i
+                        className="fa fa-pencil-square-o btn btn-primary m-2" aria-hidden="true"></i></Link></td>
                     <td>
-                        <button className="btn btn-danger" onClick={() => this.deleteDoctor(currentdoctor._id)}>
-                            Delete
-                        </button>
+                        <i className="fa fa-trash btn btn-danger " aria-hidden="true"
+                           onClick={() => this.deleteDoctor(currentdoctor._id)}></i>
                     </td>
                 </tr>
             )
@@ -54,10 +54,10 @@ class DoctorlistComponent extends React.Component {
     render() {
 
         return (
-            <div  className="container" style={{marginTop:'2rem'}}>
-                <Table striped bordered hover>
+            <div className="container" style={{marginTop: '2rem'}}>
+                <Table striped bordered hover variant="primary">
                     <thead>
-                    <tr>
+                    <tr className="text-center">
                         <th>First Name</th>
                         <th>Last Name</th>
                         <th>Email</th>
