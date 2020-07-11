@@ -11,7 +11,7 @@ class ChartrenderComponent extends React.Component {
         return (
             <div className="container" style={{marginTop: '5rem'}}>
 
-                <div className="alert alert-light" role="alert">
+                <div className="alert alert-danger" role="alert">
 
                     <Tabs defaultActiveKey="profile">
 

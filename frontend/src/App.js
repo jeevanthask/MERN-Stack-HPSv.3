@@ -11,6 +11,7 @@ import SearchpatientComponent from "./components/searchpatient/searchpatient.com
 import SearchdoctorComponent from "./components/searchdoctor/searchdoctor.component";
 import SearchsymptomComponent from "./components/searchsymptom/searchsymptom.component";
 import NavbarComponent from "./components/navbar/navbar.component";
+import FooterComponent from "./components/footer/footer.component";
 
 class App extends React.Component{
 
@@ -34,6 +35,8 @@ class App extends React.Component{
                     <Route path='/admin/searchsymptom' exact component={SearchsymptomComponent}/>
                     <Route path='/' render={() => <div>404</div>}/>
                 </Switch>
+
+
 
             </BrowserRouter>
         )

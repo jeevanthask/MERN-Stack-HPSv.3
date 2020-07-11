@@ -13,6 +13,7 @@ import DoctorproficiencychartComponent from "../charts/doctorproficiency/doctorp
 import MostpopulardiseaseschartComponent from "../charts/mostpopulardiseases/mostpopulardiseaseschart.component";
 import Example from "../charts/chartrender/chartrender.component";
 import ChartrenderComponent from "../charts/chartrender/chartrender.component";
+import FooterComponent from "../footer/footer.component";
 
 
 class DashboardComponent extends React.Component {
@@ -186,6 +187,12 @@ class DashboardComponent extends React.Component {
                     </div>
                 </div>
 
+
+                <div className="row">
+                    <div className="col-md-12">
+                        <FooterComponent/>
+                    </div>
+                </div>
 
             </div>
         )
