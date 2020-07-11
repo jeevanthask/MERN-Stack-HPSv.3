@@ -9,7 +9,8 @@ class ChartrenderComponent extends React.Component{
 
     render() {
         return(
-            <div>
+            <div className="container" style={{marginTop:'5rem'}}>
+
                 <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
                     <Tab eventKey="doctorproficiency" title="doctorproficiency">
                         <div>
@@ -32,6 +33,7 @@ class ChartrenderComponent extends React.Component{
                         </div>
                     </Tab>
                 </Tabs>
+
             </div>
 
         )
