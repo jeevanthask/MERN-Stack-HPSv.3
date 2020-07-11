@@ -1,37 +1,53 @@
 import React from "react";
 import style from './login.module.css'
+import img from '../../assets/images/avatar.png'
 
 class LoginComponent extends React.Component {
 
-    handleLoginClick = () => {
+    constructor() {
+        super();
+
+        this.state = {}
+    }
+
+    onSubmit = () => {
         this.props.history.push('/dashboard')
     }
 
     render() {
         return (
-            <div>
-                <body>
-                <div className={style.container}>
-                    <section id={style.content}>
-                        <form action="">
-                            <h1>Login Form</h1>
-                            <div>
-                                <input type="text" placeholder="Username" required="" id="username"/>
-                            </div>
-                            <div>
-                                <input type="password" placeholder="Password" required="" id="password"/>
-                            </div>
-                            <div>
-                                <input type="submit" value="Log in"/>
-                                <a href="#">Lost your password?</a>
-                                <a href="#">Register</a>
-                            </div>
-                        </form>
-                    </section>
+            <div className="container">
+
+                <div className={style.main}>
+
+                    <div className="col-md-12">
+
+                        <div className={style.loginbox}>
+
+                            <img src={img} className={style.avatar}/>
+
+                                <h1>Login Here</h1>
+
+                                <form>
+
+                                    <p>Username</p>
+                                    <input type="text" name="" placeholder="Enter Username"/>
+
+                                    <p>Password</p>
+                                    <input type="password" name="" placeholder="Enter Password"/>
+
+                                    <input type="submit" name="" value="Login"/>
+
+                                    <a href="#">Lost your password?</a><br/>
+                                    <a href="#">Don't have an account?</a>
+                                </form>
+
+                        </div>
+
+                    </div>
 
                 </div>
 
-                </body>
             </div>
         )
     }
