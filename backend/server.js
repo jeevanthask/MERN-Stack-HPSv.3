@@ -30,6 +30,8 @@ app.use('/HPSvthree/admin',require('./routes/symptoms/getsymptom.routes'))
 app.use('/HPSvthree/admin',require('./routes/symptoms/updatesymptom.routes'))
 app.use('/HPSvthree/admin',require('./routes/symptoms/deletesymptom.routes'))
 
+app.use('/HPSvthree/admin',require('./routes/symptoms/addsymptom.routes'))
+
 
 app.listen(PORT, function () {
     console.log('server is running in port ' + PORT)
