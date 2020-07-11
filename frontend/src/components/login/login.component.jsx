@@ -28,7 +28,7 @@ class LoginComponent extends React.Component {
 
                                 <h1>Login Here</h1>
 
-                                <form>
+                                <form onSubmit={this.onSubmit}>
 
                                     <p>Username</p>
                                     <input type="text" name="" placeholder="Enter Username"/>
