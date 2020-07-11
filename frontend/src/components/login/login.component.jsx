@@ -7,7 +7,22 @@ class LoginComponent extends React.Component {
     constructor() {
         super();
 
-        this.state = {}
+        this.state = {
+            username: '',
+            password: ''
+        }
+    }
+
+    onChangeUserName = (e) => {
+        this.setState({
+            username: e.target.value
+        })
+    }
+
+    onChangePassword = (e) => {
+        this.setState({
+            password: e.target.value
+        })
     }
 
     onSubmit = () => {
@@ -31,10 +46,12 @@ class LoginComponent extends React.Component {
                             <form onSubmit={this.onSubmit}>
 
                                 <p>Username</p>
-                                <input type="text" name="" placeholder="Enter Username"/>
+                                <input type="text" name="" placeholder="Enter Username"
+                                       onChange={this.onChangeUserName}/>
 
                                 <p>Password</p>
-                                <input type="password" name="" placeholder="Enter Password"/>
+                                <input type="password" name="" placeholder="Enter Password"
+                                       onChange={this.onChangePassword}/>
 
                                 <input type="submit" name="" value="Login"/>
 
