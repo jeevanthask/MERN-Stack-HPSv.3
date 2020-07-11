@@ -7,9 +7,10 @@ import AddsymptomComponent from "../addsymptom/addsymptom.component";
 import CountersComponent from "../counters/counters.component";
 import CommonsearchComponent from "../commonsearch/commonsearch.component";
 import MainheadingComponent from "../mainheading/mainheading.component";
-import PopularsymptomsComponent from "../charts/popularsymptoms/popularsymptomschart.component";
 import PopularsymptomschartComponent from "../charts/popularsymptoms/popularsymptomschart.component";
 import PatientsgenderchartComponent from "../charts/patientsgender/patientsgenderchart.component";
+import DoctorproficiencychartComponent from "../charts/doctorproficiency/doctorproficiencychart.component";
+import MostpopularchartComponent from "../charts/mostpopulardiseases/mostpopularchart.component";
 
 
 class DashboardComponent extends React.Component {
@@ -154,6 +155,16 @@ class DashboardComponent extends React.Component {
 
                         <div className="col-md-6">
                             <PatientsgenderchartComponent/>
+                        </div>
+                    </div>
+
+                    <div className="row">
+                        <div className="col-md-6">
+                            <DoctorproficiencychartComponent/>
+                        </div>
+
+                        <div className="col-md-6">
+                            <MostpopularchartComponent/>
                         </div>
                     </div>
                 </div>

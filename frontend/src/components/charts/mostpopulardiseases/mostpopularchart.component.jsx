@@ -1,7 +1,7 @@
 import React from 'react'
-import {Pie} from 'react-chartjs-2';
+import {Doughnut} from 'react-chartjs-2';
 
-class PatientsgenderchartComponent extends React.Component {
+class MostpopularchartComponent extends React.Component {
 
     constructor() {
         super();
@@ -11,7 +11,7 @@ class PatientsgenderchartComponent extends React.Component {
                 labels: ['Male', 'Female'],
                 datasets: [
                     {
-                        label: 'gender patients',
+                        label: 'symptoms cha later',
                         data: [
                             81,
                             19
@@ -36,8 +36,10 @@ class PatientsgenderchartComponent extends React.Component {
                 <div className="text-center p-3">
 
                     <div className="alert alert-primary" role="alert">
-                        <h4>gender patients</h4>
-                        <Pie
+
+                        <h4>Most popular Disesases</h4>
+
+                        <Doughnut
                             data={this.state.chartData}
                             options={{
                                 title: {
@@ -75,4 +77,4 @@ class PatientsgenderchartComponent extends React.Component {
     }
 }
 
-export default PatientsgenderchartComponent
+export default MostpopularchartComponent
