@@ -1,7 +1,7 @@
 import React from 'react'
 import {Bubble, Doughnut, Polar} from 'react-chartjs-2';
 
-class MostpopularchartComponent extends React.Component {
+class MostpopulardiseaseschartComponent extends React.Component {
 
     constructor() {
         super();
@@ -82,4 +82,4 @@ class MostpopularchartComponent extends React.Component {
     }
 }
 
-export default MostpopularchartComponent
+export default MostpopulardiseaseschartComponent
