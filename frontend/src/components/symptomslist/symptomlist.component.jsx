@@ -41,7 +41,7 @@ class SymptomlistComponent extends React.Component {
                     <td>{currentsymptom.lastname}</td>
                     <td>{currentsymptom.description}</td>
                     <td><Link to={"/admin/updatesymptom/" + currentsymptom._id}><i
-                        className="fa fa-pencil-square-o btn btn-primary m-2" aria-hidden="true"></i></Link></td>
+                        className="fa fa-pencil-square-o btn btn-primary" aria-hidden="true"></i></Link></td>
                     <td>
                         <i className="fa fa-trash btn btn-danger " aria-hidden="true"
                            onClick={() => this.deleteSymptom(currentsymptom._id)}></i>

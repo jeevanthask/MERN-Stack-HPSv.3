@@ -41,9 +41,9 @@ class PatientlistComponent extends React.Component {
                     <td>{currentpatient.lastname}</td>
                     <td>{currentpatient.email}</td>
                     <td><Link to={"/admin/updatepatient/" + currentpatient._id}><i
-                        className="fa fa-pencil-square-o btn btn-primary m-2" aria-hidden="true"></i></Link></td>
+                        className="fa fa-pencil-square-o btn btn-primary" aria-hidden="true"></i></Link></td>
                     <td>
-                        <i className="fa fa-trash btn btn-danger " aria-hidden="true"
+                        <i className="fa fa-trash btn btn-danger" aria-hidden="true"
                            onClick={() => this.deletePatient(currentpatient._id)}></i>
                     </td>
                 </tr>
