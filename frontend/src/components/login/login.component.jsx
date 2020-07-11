@@ -25,8 +25,10 @@ class LoginComponent extends React.Component {
         })
     }
 
-    onSubmit = () => {
+    onSubmit = (e) => {
         this.props.history.push('/dashboard')
+
+
     }
 
     render() {
