@@ -75,23 +75,25 @@ class DashboardComponent extends React.Component {
 
                     <div className="row">
 
-                        <div className="col-md-4">
+                        <div className="col-md-4 ">
 
-                            <div className="row">
+                            <div className="row ">
                                 <div className="col-md-12">
                                     <AddpatientComponent/>
                                 </div>
                             </div>
                             <div className="row">
                                 <div className="col-md-12">
-                                    <Button variant="primary" className={style.buttonstyle} onClick={this.handlePatientList}>
+                                    <Button variant="primary" className={style.buttonstyle}
+                                            onClick={this.handlePatientList}>
                                         Patient List
                                     </Button>
                                 </div>
                             </div>
                             <div className="row">
                                 <div className="col-md-12">
-                                    <Button variant="primary" className={style.buttonstyle} onClick={this.handleSearchPatient}>
+                                    <Button variant="primary" className={style.buttonstyle}
+                                            onClick={this.handleSearchPatient}>
                                         Search Patient
                                     </Button>
                                 </div>
@@ -107,14 +109,16 @@ class DashboardComponent extends React.Component {
                             </div>
                             <div className="row">
                                 <div className="col-md-12">
-                                    <Button variant="primary" className={style.buttonstyle} onClick={this.handleDoctorList}>
+                                    <Button variant="primary" className={style.buttonstyle}
+                                            onClick={this.handleDoctorList}>
                                         Doctor List
                                     </Button>
                                 </div>
                             </div>
                             <div className="row">
                                 <div className="col-md-12">
-                                    <Button variant="primary" className={style.buttonstyle} onClick={this.handleSearchDoctor}>
+                                    <Button variant="primary" className={style.buttonstyle}
+                                            onClick={this.handleSearchDoctor}>
                                         Search Doctor
                                     </Button>
                                 </div>
@@ -131,14 +135,16 @@ class DashboardComponent extends React.Component {
                             </div>
                             <div className="row">
                                 <div className="col-md-12">
-                                    <Button variant="primary" className={style.buttonstyle} onClick={this.handleSymptomList}>
+                                    <Button variant="primary" className={style.buttonstyle}
+                                            onClick={this.handleSymptomList}>
                                         Symptom List
                                     </Button>
                                 </div>
                             </div>
                             <div className="row">
                                 <div className="col-md-12">
-                                    <Button variant="primary" className={style.buttonstyle} onClick={this.handleSearchSymptom}>
+                                    <Button variant="primary" className={style.buttonstyle}
+                                            onClick={this.handleSearchSymptom}>
                                         Search Symptom
                                     </Button>
                                 </div>
@@ -152,7 +158,7 @@ class DashboardComponent extends React.Component {
                 <div>
                     <div className="row">
                         <div className="col-md-12">
-                           <ChartrenderComponent/>
+                            <ChartrenderComponent/>
                         </div>
                     </div>
                 </div>
@@ -180,13 +186,11 @@ class DashboardComponent extends React.Component {
                     </div>
                 </div>
 
-
                 <div className="row">
                     <div className="col-md-12">
                         <br/><br/><br/><br/>
                     </div>
                 </div>
-
 
                 <div className="row">
                     <div className="col-md-12">

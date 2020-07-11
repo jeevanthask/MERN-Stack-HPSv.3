@@ -13,7 +13,7 @@ class PatientcounterComponent extends React.Component {
     render() {
 
         return (
-            <div>
+            <div className="container">
 
                 <Card bg="primary" border="primary" style={{width: '18rem'}}>
                     <Card.Header className="text-center"><h5>Patients Count</h5></Card.Header>
