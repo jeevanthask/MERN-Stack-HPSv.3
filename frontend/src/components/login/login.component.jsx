@@ -26,21 +26,21 @@ class LoginComponent extends React.Component {
 
                             <img src={img} className={style.avatar}/>
 
-                                <h1>Login Here</h1>
+                            <h1>Login Here</h1>
 
-                                <form onSubmit={this.onSubmit}>
+                            <form onSubmit={this.onSubmit}>
 
-                                    <p>Username</p>
-                                    <input type="text" name="" placeholder="Enter Username"/>
+                                <p>Username</p>
+                                <input type="text" name="" placeholder="Enter Username"/>
 
-                                    <p>Password</p>
-                                    <input type="password" name="" placeholder="Enter Password"/>
+                                <p>Password</p>
+                                <input type="password" name="" placeholder="Enter Password"/>
 
-                                    <input type="submit" name="" value="Login"/>
+                                <input type="submit" name="" value="Login"/>
 
-                                    <a href="#">Lost your password?</a><br/>
-                                    <a href="#">Don't have an account?</a>
-                                </form>
+                                <a href="#">Lost your password?</a><br/>
+                                <a href="#">Don't have an account?</a>
+                            </form>
 
                         </div>
 
