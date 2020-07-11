@@ -3,6 +3,7 @@ import axios from 'axios'
 import {Table} from "react-bootstrap";
 import {Link} from "react-router-dom";
 import DoctorsearchComponent from "../specificsearch/doctorsearch/doctorsearch.component";
+import SymptomsearchComponent from "../specificsearch/symptomsearch/symptomsearch.component";
 
 class SymptomlistComponent extends React.Component {
 
@@ -59,28 +60,32 @@ class SymptomlistComponent extends React.Component {
 
                 <div className="row">
                     <div className="col-md-12">
-                        <SymptomlistComponent/>
+                        <SymptomsearchComponent/>
                     </div>
                 </div>
 
-                <Table striped bordered hover variant="primary">
-                    <thead>
-                    <tr className="text-center">
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Description</th>
-                        <th>Edit</th>
-                        <th>Delete</th>
-                    </tr>
-                    </thead>
-                    <tbody>
+                <div style={{marginTop: '3rem'}}>
+                    <Table striped bordered hover variant="primary">
+                        <thead>
+                        <tr className="text-center">
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Description</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                        </thead>
+                        <tbody>
 
-                    {
-                        this.symptomList()
-                    }
+                        {
+                            this.symptomList()
+                        }
 
-                    </tbody>
-                </Table>
+                        </tbody>
+                    </Table>
+                </div>
+
+
             </div>
         )
     }

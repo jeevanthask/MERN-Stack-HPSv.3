@@ -3,6 +3,7 @@ import axios from 'axios'
 import {Table} from "react-bootstrap";
 import {Link} from "react-router-dom";
 import DoctorsearchComponent from "../specificsearch/doctorsearch/doctorsearch.component";
+import PatientsearchComponent from "../specificsearch/patientsearch/patientsearch.component";
 
 class PatientlistComponent extends React.Component {
 
@@ -59,28 +60,32 @@ class PatientlistComponent extends React.Component {
 
                 <div className="row">
                     <div className="col-md-12">
-                        <PatientlistComponent/>
+                        <PatientsearchComponent/>
                     </div>
                 </div>
 
-                <Table striped bordered hover variant="primary">
-                    <thead>
-                    <tr className="text-center">
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Email</th>
-                        <th>Edit</th>
-                        <th>Delete</th>
-                    </tr>
-                    </thead>
-                    <tbody>
+                <div style={{marginTop: '3rem'}}>
+                    <Table striped bordered hover variant="primary">
+                        <thead>
+                        <tr className="text-center">
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Email</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                        </thead>
+                        <tbody>
 
-                    {
-                        this.patientList()
-                    }
+                        {
+                            this.patientList()
+                        }
 
-                    </tbody>
-                </Table>
+                        </tbody>
+                    </Table>
+                </div>
+
+
             </div>
         )
     }

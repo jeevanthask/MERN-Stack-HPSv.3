@@ -63,7 +63,7 @@ class DoctorlistComponent extends React.Component {
                     </div>
                 </div>
 
-                <div className={{marginTop: '2rem'}}>
+                <div style={{marginTop: '3rem'}}>
                     <Table striped bordered hover variant="primary">
                         <thead>
                         <tr className="text-center">
