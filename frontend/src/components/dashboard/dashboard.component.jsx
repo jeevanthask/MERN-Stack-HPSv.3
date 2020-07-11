@@ -11,6 +11,8 @@ import PopularsymptomschartComponent from "../charts/popularsymptoms/popularsymp
 import PatientsgenderchartComponent from "../charts/patientsgender/patientsgenderchart.component";
 import DoctorproficiencychartComponent from "../charts/doctorproficiency/doctorproficiencychart.component";
 import MostpopularchartComponent from "../charts/mostpopulardiseases/mostpopularchart.component";
+import Example from "../charts/chartrender/chartrender.component";
+import ChartrenderComponent from "../charts/chartrender/chartrender.component";
 
 
 class DashboardComponent extends React.Component {
@@ -165,6 +167,14 @@ class DashboardComponent extends React.Component {
 
                         <div className="col-md-6">
                             <MostpopularchartComponent/>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div className="row">
+                        <div className="col-md-12">
+                           <ChartrenderComponent/>
                         </div>
                     </div>
                 </div>
