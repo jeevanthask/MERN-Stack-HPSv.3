@@ -12,6 +12,7 @@ import SearchdoctorComponent from "./components/searchdoctor/searchdoctor.compon
 import SearchsymptomComponent from "./components/searchsymptom/searchsymptom.component";
 import NavbarComponent from "./components/navbar/navbar.component";
 import FooterComponent from "./components/footer/footer.component";
+import LoginComponent from "./components/login/login.component";
 
 class App extends React.Component{
 
@@ -23,7 +24,8 @@ class App extends React.Component{
 
                 <Switch>
 
-                    <Route path='/' exact component={DashboardComponent}/>
+                    <Route path='/' exact component={LoginComponent}/>
+                    <Route path='/dashboard' exact component={DashboardComponent}/>
                     <Route path='/admin/patientlist' exact component={PatientlistComponent}/>
                     <Route path='/admin/doctorlist' exact component={DoctorlistComponent}/>
                     <Route path='/admin/symptomlist' exact component={SymptomlistComponent}/>
