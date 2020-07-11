@@ -14,6 +14,8 @@ import MostpopulardiseaseschartComponent from "../charts/mostpopulardiseases/mos
 import Example from "../charts/chartrender/chartrender.component";
 import ChartrenderComponent from "../charts/chartrender/chartrender.component";
 import FooterComponent from "../footer/footer.component";
+import AdddiseaseComponent from "../adddisease/adddisease.component";
+import DiseaselistComponent from "../diseaselist/diseaselist.component";
 
 
 class DashboardComponent extends React.Component {
@@ -45,6 +47,10 @@ class DashboardComponent extends React.Component {
 
     handleSearchDoctor = () => {
         this.props.history.push('/admin/searchdoctor')
+    }
+
+    handleDiseaseList = () => {
+        this.props.history.push('/admin/diseaselist')
     }
 
     render() {
@@ -148,6 +154,19 @@ class DashboardComponent extends React.Component {
                                         Search Symptom
                                     </Button>
                                 </div>
+                            </div>
+                        </div>
+
+
+                        <div className="row">
+                            <div className="col-md-12">
+                                <AdddiseaseComponent/>
+                            </div>
+                            <div className="col-md-12">
+                                <Button variant="primary" className={style.buttonstyle}
+                                        onClick={this.handleDiseaseList}>
+                                    Disease List
+                                </Button>
                             </div>
                         </div>
 

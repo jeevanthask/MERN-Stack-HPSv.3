@@ -2,20 +2,20 @@ import React from "react";
 import axios from 'axios'
 import {Table} from "react-bootstrap";
 import {Link} from "react-router-dom";
-import DoctorsearchComponent from "../specificsearch/doctorsearch/doctorsearch.component";
+import DiseasesearchComponent from "../specificsearch/diseasesearch/diseasesearch.component";
 
-class DoctorlistComponent extends React.Component {
+class DiseaselistComponent extends React.Component {
 
     constructor() {
         super()
         this.state = {
-            doctors: []
+            diseases: []
         }
     }
 
-    deleteDoctor = (id) => {
+    deleteDisease = (id) => {
 
-        axios.delete('http://localhost:4000/HPSvthree/admin/deletedoctor/' + id)
+        axios.delete('http://localhost:4000/HPSvthree/admin/deletedisease/' + id)
             .then(res => console.log(res.data))
 
         window.location.reload(false);
@@ -23,10 +23,10 @@ class DoctorlistComponent extends React.Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:4000/HPSvthree/admin/getdoctors')
+        axios.get('http://localhost:4000/HPSvthree/admin/getdiseases')
             .then(response => {
                 this.setState({
-                    doctors: response.data
+                    diseases: response.data
                 })
             })
             .catch(function (error) {
@@ -34,18 +34,18 @@ class DoctorlistComponent extends React.Component {
             })
     }
 
-    doctorList = () => {
-        return this.state.doctors.map(currentdoctor => {
+    diseaseList = () => {
+        return this.state.diseases.map(currentdisease => {
             return (
                 <tr className="text-center">
-                    <td>{currentdoctor.firstname}</td>
-                    <td>{currentdoctor.lastname}</td>
-                    <td>{currentdoctor.email}</td>
-                    <td><Link to={"/admin/updatedoctor/" + currentdoctor._id}><i
-    className="fa fa-pencil-square-o btn btn-primary" aria-hidden="true"/></Link></td>
+                    <td>{currentdisease.firstname}</td>
+                    <td>{currentdisease.lastname}</td>
+                    <td>{currentdisease.description}</td>
+                    <td><Link to={"/admin/updatedisease/" + currentdisease._id}><i
+                        className="fa fa-pencil-square-o btn btn-primary" aria-hidden="true"/></Link></td>
                     <td>
                         <i className="fa fa-trash btn btn-danger " aria-hidden="true"
-    onClick={() => this.deleteDoctor(currentdoctor._id)}/>
+                           onClick={() => this.deleteDisease(currentdisease._id)}/>
                     </td>
                 </tr>
             )
@@ -59,7 +59,7 @@ class DoctorlistComponent extends React.Component {
 
                 <div className="row">
                     <div className="col-md-12">
-                        <DoctorsearchComponent/>
+                        <DiseasesearchComponent/>
                     </div>
                 </div>
 
@@ -69,7 +69,7 @@ class DoctorlistComponent extends React.Component {
                         <tr className="text-center">
                             <th>First Name</th>
                             <th>Last Name</th>
-                            <th>Email</th>
+                            <th>Description</th>
                             <th>Edit</th>
                             <th>Delete</th>
                         </tr>
@@ -77,12 +77,13 @@ class DoctorlistComponent extends React.Component {
                         <tbody>
 
                         {
-                            this.doctorList()
+                            this.diseaseList()
                         }
 
                         </tbody>
                     </Table>
                 </div>
+
 
             </div>
         )
@@ -90,4 +91,4 @@ class DoctorlistComponent extends React.Component {
 }
 
 
-export default DoctorlistComponent
+export default DiseaselistComponent
