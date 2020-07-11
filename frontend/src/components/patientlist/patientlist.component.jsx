@@ -2,6 +2,7 @@ import React from "react";
 import axios from 'axios'
 import {Table} from "react-bootstrap";
 import {Link} from "react-router-dom";
+import DoctorsearchComponent from "../specificsearch/doctorsearch/doctorsearch.component";
 
 class PatientlistComponent extends React.Component {
 
@@ -55,6 +56,13 @@ class PatientlistComponent extends React.Component {
 
         return (
             <div className="container" style={{marginTop: '2rem'}}>
+
+                <div className="row">
+                    <div className="col-md-12">
+                        <PatientlistComponent/>
+                    </div>
+                </div>
+
                 <Table striped bordered hover variant="primary">
                     <thead>
                     <tr className="text-center">

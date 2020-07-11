@@ -2,6 +2,7 @@ import React from "react";
 import axios from 'axios'
 import {Table} from "react-bootstrap";
 import {Link} from "react-router-dom";
+import DoctorsearchComponent from "../specificsearch/doctorsearch/doctorsearch.component";
 
 class DoctorlistComponent extends React.Component {
 
@@ -55,24 +56,34 @@ class DoctorlistComponent extends React.Component {
 
         return (
             <div className="container" style={{marginTop: '2rem'}}>
-                <Table striped bordered hover variant="primary">
-                    <thead>
-                    <tr className="text-center">
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Email</th>
-                        <th>Edit</th>
-                        <th>Delete</th>
-                    </tr>
-                    </thead>
-                    <tbody>
 
-                    {
-                        this.doctorList()
-                    }
+                <div className="row">
+                    <div className="col-md-12">
+                        <DoctorsearchComponent/>
+                    </div>
+                </div>
 
-                    </tbody>
-                </Table>
+                <div className={{marginTop: '2rem'}}>
+                    <Table striped bordered hover variant="primary">
+                        <thead>
+                        <tr className="text-center">
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Email</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        {
+                            this.doctorList()
+                        }
+
+                        </tbody>
+                    </Table>
+                </div>
+
             </div>
         )
     }
