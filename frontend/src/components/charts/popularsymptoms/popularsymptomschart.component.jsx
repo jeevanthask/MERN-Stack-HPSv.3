@@ -1,7 +1,7 @@
 import React from 'react'
 import {Pie} from 'react-chartjs-2';
 
-class PopularsymptomsComponent extends React.Component {
+class PopularsymptomschartComponent extends React.Component {
 
     constructor() {
         super();
@@ -11,8 +11,7 @@ class PopularsymptomsComponent extends React.Component {
                 labels: ['Male', 'Female'],
                 datasets: [
                     {
-                        label: 'Gender distribution of COVID-19 confirmed in\n' +
-                            'Sri Lanka ',
+                        label: 'symptoms cha later',
                         data: [
                             81,
                             19
@@ -35,7 +34,7 @@ class PopularsymptomsComponent extends React.Component {
         return (
             <div style={{marginTop: 15}}>
                 <div className="text-center p-3" style={{backgroundColor: '#FFFFFF'}}>
-                    <h4>The gender based distribution of COVID-19 confirmed in Sri Lanka </h4>
+                    <h4>symptoms cha later</h4>
                     <Pie
                         data={this.state.chartData}
                         options={{
@@ -72,4 +71,4 @@ class PopularsymptomsComponent extends React.Component {
     }
 }
 
-export default PopularsymptomsComponent
+export default PopularsymptomschartComponent
