@@ -42,9 +42,8 @@ class PatientlistComponent extends React.Component {
                     <td>{currentpatient.email}</td>
                     <td><Link to={"/admin/updatepatient/" + currentpatient._id}>Edit</Link></td>
                     <td>
-                        <button className="btn btn-danger" onClick={() => this.deletePatient(currentpatient._id)}>
-                            Delete
-                        </button>
+                        <i className="fa fa-trash btn btn-danger " aria-hidden="true"
+                           onClick={() => this.deletePatient(currentpatient._id)}></i>
                     </td>
                 </tr>
             )
@@ -54,8 +53,8 @@ class PatientlistComponent extends React.Component {
     render() {
 
         return (
-            <div className="container" style={{marginTop:'2rem'}}>
-                <Table striped bordered hover responsive>
+            <div className="container" style={{marginTop: '2rem'}}>
+                <Table striped bordered hover variant="primary">
                     <thead>
                     <tr>
                         <th>First Name</th>
