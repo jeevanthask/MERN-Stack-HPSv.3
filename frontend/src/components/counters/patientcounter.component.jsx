@@ -15,7 +15,7 @@ class PatientcounterComponent extends React.Component {
         return (
             <div>
 
-                <Card bg="warning" border="primary" style={{width: '18rem'}}>
+                <Card bg="primary" border="primary" style={{width: '18rem'}}>
                     <Card.Header className="text-center"><h5>Patients Count</h5></Card.Header>
                     <Card.Body>
                         <Card.Title className="text-center">
