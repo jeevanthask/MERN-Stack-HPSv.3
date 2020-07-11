@@ -11,11 +11,9 @@ import PopularsymptomschartComponent from "../charts/popularsymptoms/popularsymp
 import PatientsgenderchartComponent from "../charts/patientsgender/patientsgenderchart.component";
 import DoctorproficiencychartComponent from "../charts/doctorproficiency/doctorproficiencychart.component";
 import MostpopulardiseaseschartComponent from "../charts/mostpopulardiseases/mostpopulardiseaseschart.component";
-import Example from "../charts/chartrender/chartrender.component";
 import ChartrenderComponent from "../charts/chartrender/chartrender.component";
 import FooterComponent from "../footer/footer.component";
 import AdddiseaseComponent from "../adddisease/adddisease.component";
-import DiseaselistComponent from "../diseaselist/diseaselist.component";
 
 
 class DashboardComponent extends React.Component {
@@ -81,7 +79,7 @@ class DashboardComponent extends React.Component {
 
                     <div className="row">
 
-                        <div className="col-md-4 ">
+                        <div className="col-md-3">
 
                             <div className="row ">
                                 <div className="col-md-12">
@@ -106,7 +104,7 @@ class DashboardComponent extends React.Component {
                             </div>
                         </div>
 
-                        <div className="col-md-4">
+                        <div className="col-md-3">
 
                             <div className="row">
                                 <div className="col-md-12">
@@ -132,7 +130,7 @@ class DashboardComponent extends React.Component {
 
                         </div>
 
-                        <div className="col-md-4">
+                        <div className="col-md-3">
 
                             <div className="row">
                                 <div className="col-md-12">
@@ -157,16 +155,21 @@ class DashboardComponent extends React.Component {
                             </div>
                         </div>
 
+                        <div className="col-md-3">
 
-                        <div className="row">
-                            <div className="col-md-12">
-                                <AdddiseaseComponent/>
+                            <div className="row">
+                                <div className="col-md-12">
+                                    <AdddiseaseComponent/>
+                                </div>
                             </div>
-                            <div className="col-md-12">
-                                <Button variant="primary" className={style.buttonstyle}
-                                        onClick={this.handleDiseaseList}>
-                                    Disease List
-                                </Button>
+                            <div className="row">
+                                <div className="col-md-12">
+                                    <Button variant="primary" className={style.buttonstyle}
+                                            onClick={this.handleDiseaseList}>
+                                        Disease List
+                                    </Button>
+                                </div>
+
                             </div>
                         </div>
 
