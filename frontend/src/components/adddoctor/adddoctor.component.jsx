@@ -9,9 +9,10 @@ class AdddoctorComponent extends React.Component {
         super();
         this.state = {
             show: false,
-            firstname:'',
-            lastname:'',
-            email:''
+            firstname: '',
+            lastname: '',
+            email: '',
+            speciality: ''
         }
     }
 
@@ -29,42 +30,52 @@ class AdddoctorComponent extends React.Component {
 
     onChangeFirstName = (e) => {
         this.setState({
-            firstname:e.target.value
+            firstname: e.target.value
         })
     }
 
     onChangeLastName = (e) => {
         this.setState({
-            lastname:e.target.value
+            lastname: e.target.value
         })
     }
 
     onChangeEmail = (e) => {
         this.setState({
-            email:e.target.value
+            email: e.target.value
+        })
+    }
+
+    onChangeSpeciality = (e) => {
+        this.setState({
+            speciality: e.target.value
         })
     }
 
     onSubmit = (e) => {
         e.preventDefault()
 
+        console.log(this.state.speciality)
+
         this.setState({
-            show:false
+            show: false
         })
 
         const newDoctor = {
             firstname: this.state.firstname,
             lastname: this.state.lastname,
-            email:this.state.email
+            email: this.state.email,
+            speciality:this.state.speciality
         }
 
-        axios.post('http://localhost:4000/HPSvthree/admin/adddoctor',newDoctor)
+        axios.post('http://localhost:4000/HPSvthree/admin/adddoctor', newDoctor)
             .then(res => console.log(res.data))
 
         this.setState({
-            firstname:'',
-            lastname:'',
-            email:''
+            firstname: '',
+            lastname: '',
+            email: '',
+            speciality:''
         })
 
     }
@@ -78,7 +89,7 @@ class AdddoctorComponent extends React.Component {
 
                 <Modal show={this.state.show} onHide={this.handleClose}>
 
-                    <Modal.Header closeButton className = {style.modalheader}>
+                    <Modal.Header closeButton className={style.modalheader}>
                         <Modal.Title>Add Doctor</Modal.Title>
                     </Modal.Header>
 
@@ -87,21 +98,30 @@ class AdddoctorComponent extends React.Component {
                         <Form onSubmit={this.onSubmit}>
                             <Form.Group>
                                 <Form.Label>First Name</Form.Label>
-                                <Form.Control type="text" onChange = {this.onChangeFirstName}/>
+                                <Form.Control type="text" onChange={this.onChangeFirstName}/>
                             </Form.Group>
 
                             <Form.Group>
                                 <Form.Label>Last Name</Form.Label>
-                                <Form.Control type="text" onChange = {this.onChangeLastName}/>
+                                <Form.Control type="text" onChange={this.onChangeLastName}/>
                             </Form.Group>
 
                             <Form.Group>
                                 <Form.Label>Email</Form.Label>
-                                <Form.Control type="email" onChange = {this.onChangeEmail}/>
+                                <Form.Control type="email" onChange={this.onChangeEmail}/>
+                            </Form.Group>
+
+                            <Form.Group>
+                                <Form.Label>Speciality</Form.Label>
+                                <Form.Control as="select" defaultValue="Choose..." onChange={this.onChangeSpeciality}>
+                                    <option>Choose...</option>
+                                    <option>sergon1</option>
+                                    <option>sergon2</option>
+                                </Form.Control>
                             </Form.Group>
 
                             <Modal.Footer>
-                                <Button variant="primary" type="submit" className = {style.buttonstyle}>
+                                <Button variant="primary" type="submit" className={style.buttonstyle}>
                                     Add Doctor
                                 </Button>
                             </Modal.Footer>

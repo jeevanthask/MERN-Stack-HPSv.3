@@ -41,6 +41,7 @@ class DoctorlistComponent extends React.Component {
                     <td>{currentdoctor.firstname}</td>
                     <td>{currentdoctor.lastname}</td>
                     <td>{currentdoctor.email}</td>
+                    <td>{currentdoctor.speciality}</td>
                     <td><Link to={"/admin/updatedoctor/" + currentdoctor._id}><i
     className="fa fa-pencil-square-o btn btn-primary" aria-hidden="true"/></Link></td>
                     <td>
@@ -70,6 +71,7 @@ class DoctorlistComponent extends React.Component {
                             <th>First Name</th>
                             <th>Last Name</th>
                             <th>Email</th>
+                            <th>Speciality</th>
                             <th>Edit</th>
                             <th>Delete</th>
                         </tr>

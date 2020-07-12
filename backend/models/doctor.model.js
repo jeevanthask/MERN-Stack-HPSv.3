@@ -10,6 +10,9 @@ let Doctor = new Schema({
     },
     email: {
         type: String
+    },
+    speciality:{
+        type:String
     }
 });
 
