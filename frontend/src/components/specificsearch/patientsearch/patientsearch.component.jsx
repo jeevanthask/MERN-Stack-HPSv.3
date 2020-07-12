@@ -31,10 +31,14 @@ class PatientsearchComponent extends React.Component {
 
         let obj = this.state.patients.find(o => o.firstname === this.state.searchitem);
 
-        this.setState({
-            show: true,
-            searchresults: obj
-        })
+        if (obj === undefined) {
+            alert("no matching results")
+        } else {
+            this.setState({
+                show: true,
+                searchresults: obj
+            })
+        }
 
     }
 
