@@ -84,69 +84,64 @@ class DoctorproficiencychartComponent extends React.Component {
 
         for (let i = 0; i < this.state.doctors.length; i++) {
 
-
             if (this.state.doctors[i].speciality === 'Pediatrician') {
                 this.setState({
                     Pediatrician: this.state.Pediatrician++
                 })
             }
-            if (this.state.doctors[i].speciality === 'Obstetrician') {
+            else if (this.state.doctors[i].speciality === 'Obstetrician') {
                 this.setState({
                     Obstetrician: this.state.Obstetrician++
                 })
             }
-            if (this.state.doctors[i].speciality === 'Surgeon') {
+            else if (this.state.doctors[i].speciality === 'Surgeon') {
 
                 this.setState({
                     Surgeon: this.state.Surgeon++
                 })
             }
-            if (this.state.doctors[i].speciality === 'Psychiatrist') {
+            else if (this.state.doctors[i].speciality === 'Psychiatrist') {
 
                 this.setState({
                     Psychiatrist: this.state.Psychiatrist++
                 })
             }
-            if (this.state.doctors[i].speciality === 'Cardiologist') {
+            else if (this.state.doctors[i].speciality === 'Cardiologist') {
 
                 this.setState({
                     Cardiologist: this.state.Cardiologist++
                 })
             }
-            if (this.state.doctors[i].speciality === 'Dermatologist') {
+            else if (this.state.doctors[i].speciality === 'Dermatologist') {
 
                 this.setState({
                     Dermatologist: this.state.Dermatologist++
                 })
             }
-            if (this.state.doctors[i].speciality === 'Endocrinologist') {
+            else if (this.state.doctors[i].speciality === 'Endocrinologist') {
 
                 this.setState({
                     Endocrinologist: this.state.Endocrinologist++
                 })
             }
-            if (this.state.doctors[i].speciality === 'Gastroenterologist') {
+            else if (this.state.doctors[i].speciality === 'Gastroenterologist') {
 
                 this.setState({
                     Gastroenterologist: this.state.Gastroenterologist++
                 })
             }
-            if (this.state.doctors[i].speciality === 'Nephrologist') {
+            else if (this.state.doctors[i].speciality === 'Nephrologist') {
 
                 this.setState({
                     Nephrologist: this.state.Nephrologist++
                 })
             }
-            if (this.state.doctors[i].speciality === 'Ophthalmologist') {
-
+            else {
                 this.setState({
                     Ophthalmologist: this.state.Ophthalmologist++
                 })
             }
-
         }
-
-        alert(this.state.Gastroenterologist)
 
     }
 
@@ -171,9 +166,16 @@ class DoctorproficiencychartComponent extends React.Component {
 
                             }}
                         />
+
+
+                        <div className="row" style={{marginTop:'1rem'}}>
+                            <div className="col-md-12">
+                                <button className="btn btn-primary" onClick={this.processMaximumSpeciality}>Process</button>
+                            </div>
+                        </div>
+
                     </div>
 
-                    <button className="btn btn-primary" onClick={this.processMaximumSpeciality}>Process</button>
 
                 </div>
             </div>
