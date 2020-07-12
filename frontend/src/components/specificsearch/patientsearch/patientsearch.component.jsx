@@ -1,7 +1,7 @@
 import React from "react";
 import style from './patientsearch.module.css'
 import axios from "axios";
-import {Button, Modal} from "react-bootstrap";
+import {Button, Modal, ListGroup} from "react-bootstrap";
 
 class PatientsearchComponent extends React.Component {
 
@@ -36,7 +36,6 @@ class PatientsearchComponent extends React.Component {
             searchresults: obj
         })
 
-
     }
 
     componentDidMount() {
@@ -54,10 +53,11 @@ class PatientsearchComponent extends React.Component {
     render() {
         return (
             <div>
+
                 <div className={style.containernew}>
+
                     <input type="text" placeholder="Search..." onChange={this.onChangeSearchInput}/>
                     <div className={style.search} onClick={this.handleSearchClick}></div>
-
 
                 </div>
 
@@ -70,9 +70,11 @@ class PatientsearchComponent extends React.Component {
 
                     <Modal.Body>
 
-                        {
-                            this.state.searchresults.firstname
-                        }
+                        <ListGroup>
+                            <ListGroup.Item>First Name : {this.state.searchresults.firstname}</ListGroup.Item>
+                            <ListGroup.Item>Last Name : {this.state.searchresults.lastname}</ListGroup.Item>
+                            <ListGroup.Item>Email : {this.state.searchresults.email}</ListGroup.Item>
+                        </ListGroup>
 
                     </Modal.Body>
 
@@ -81,7 +83,6 @@ class PatientsearchComponent extends React.Component {
                             Ok
                         </Button>
                     </Modal.Footer>
-
 
                 </Modal>
             </div>
