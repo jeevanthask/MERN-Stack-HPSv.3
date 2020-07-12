@@ -1,28 +1,42 @@
 import React from "react";
 import style from './patientsearch.module.css'
 import axios from "axios";
+import {Button, Modal} from "react-bootstrap";
 
 class PatientsearchComponent extends React.Component {
-    
+
     constructor() {
         super();
         this.state = {
-            patients:[],
-            searchitem:''
+            show: false,
+            patients: [],
+            searchitem: '',
+            searchresults: []
         }
+    }
+
+    handleClose = () => {
+        this.setState({
+            show: false
+        })
     }
 
     onChangeSearchInput = (e) => {
         this.setState({
-            searchitem:e.target.value
+            searchitem: e.target.value
         })
     }
 
-    handleSearchClick = () =>{
+    handleSearchClick = () => {
 
         let obj = this.state.patients.find(o => o.firstname === this.state.searchitem);
 
-        alert(obj.lastname)
+        this.setState({
+            show: true,
+            searchresults: obj
+        })
+
+
     }
 
     componentDidMount() {
@@ -39,10 +53,39 @@ class PatientsearchComponent extends React.Component {
 
     render() {
         return (
-            <div className={style.containernew}>
-                <input type="text" placeholder="Search..." onChange={this.onChangeSearchInput}/>
-                <div className={style.search} onClick={this.handleSearchClick}></div>
+            <div>
+                <div className={style.containernew}>
+                    <input type="text" placeholder="Search..." onChange={this.onChangeSearchInput}/>
+                    <div className={style.search} onClick={this.handleSearchClick}></div>
+
+
+                </div>
+
+
+                <Modal show={this.state.show} onHide={this.handleClose}>
+
+                    <Modal.Header closeButton className={style.modalheader}>
+                        <Modal.Title>Search Results</Modal.Title>
+                    </Modal.Header>
+
+                    <Modal.Body>
+
+                        {
+                            this.state.searchresults.firstname
+                        }
+
+                    </Modal.Body>
+
+                    <Modal.Footer>
+                        <Button variant="warning" onClick={this.handleClose}>
+                            Ok
+                        </Button>
+                    </Modal.Footer>
+
+
+                </Modal>
             </div>
+
         )
     }
 
