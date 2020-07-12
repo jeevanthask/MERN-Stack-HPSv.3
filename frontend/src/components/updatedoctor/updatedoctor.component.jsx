@@ -102,7 +102,8 @@ class UpdatedoctorComponent extends React.Component {
                                       onChange={this.onChangeEmail}/>
                     </Form.Group>
 
-                    <Form.Control as="select" defaultValue="Choose..." onChange={this.onChangeSpeciality}
+                    <Form.Control className={style.selectstyle} as="select" defaultValue="Choose..."
+                                  onChange={this.onChangeSpeciality}
                                   value={this.state.speciality}>
                         <option>Choose...</option>
                         <option>Pediatrician</option>
