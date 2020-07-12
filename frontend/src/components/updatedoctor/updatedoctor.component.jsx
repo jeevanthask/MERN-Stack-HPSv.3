@@ -10,7 +10,8 @@ class UpdatedoctorComponent extends React.Component {
         this.state = {
             firstname: '',
             lastname: '',
-            email: ''
+            email: '',
+            speciality: ''
         }
     }
 
@@ -33,13 +34,20 @@ class UpdatedoctorComponent extends React.Component {
         })
     }
 
+    onChangeSpeciality = (e) => {
+        this.setState({
+            speciality: e.target.value
+        })
+    }
+
     componentDidMount() {
         axios.get('http://localhost:4000/HPSvthree/admin/getdoctor/' + this.props.match.params.id)
             .then(response => {
                 this.setState({
                     firstname: response.data.firstname,
                     lastname: response.data.lastname,
-                    email: response.data.email
+                    email: response.data.email,
+                    speciality: response.data.speciality
                 })
             })
             .catch(function (error) {
@@ -55,7 +63,8 @@ class UpdatedoctorComponent extends React.Component {
         const newDoctor = {
             firstname: this.state.firstname,
             lastname: this.state.lastname,
-            email: this.state.email
+            email: this.state.email,
+            speciality: this.state.speciality
         }
 
         axios.post('http://localhost:4000/HPSvthree/admin/updatedoctor/' + this.props.match.params.id, newDoctor)
@@ -64,7 +73,8 @@ class UpdatedoctorComponent extends React.Component {
         this.setState({
             firstname: '',
             lastname: '',
-            email: ''
+            email: '',
+            speciality: ''
         })
 
     }
@@ -91,6 +101,21 @@ class UpdatedoctorComponent extends React.Component {
                         <Form.Control type="email" className={style.textboxstyle} value={this.state.email}
                                       onChange={this.onChangeEmail}/>
                     </Form.Group>
+
+                    <Form.Control as="select" defaultValue="Choose..." onChange={this.onChangeSpeciality}
+                                  value={this.state.speciality}>
+                        <option>Choose...</option>
+                        <option>Pediatrician</option>
+                        <option>Obstetrician/Gynecologist (OB/GYN)</option>
+                        <option>Surgeon</option>
+                        <option>Psychiatrist</option>
+                        <option>Cardiologist</option>
+                        <option>Dermatologist</option>
+                        <option>Endocrinologist</option>
+                        <option>Gastroenterologist</option>
+                        <option>Nephrologist</option>
+                        <option>Ophthalmologist</option>
+                    </Form.Control>
 
                     <Button variant="primary" type="submit" className={style.buttonstyle}>
                         Update Doctor

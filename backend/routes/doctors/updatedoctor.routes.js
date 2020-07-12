@@ -17,6 +17,7 @@ doctorRoutes.route('/updatedoctor/:id').post(function (req, res) {
             doctor.firstname = req.body.firstname
             doctor.lastname = req.body.lastname
             doctor.email = req.body.email
+            doctor.speciality = req.body.speciality
 
             doctor.save().then(todo => {
                 res.json('doctor updated')

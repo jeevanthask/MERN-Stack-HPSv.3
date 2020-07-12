@@ -115,8 +115,16 @@ class AdddoctorComponent extends React.Component {
                                 <Form.Label>Speciality</Form.Label>
                                 <Form.Control as="select" defaultValue="Choose..." onChange={this.onChangeSpeciality}>
                                     <option>Choose...</option>
-                                    <option>sergon1</option>
-                                    <option>sergon2</option>
+                                    <option>Pediatrician</option>
+                                    <option>Obstetrician/Gynecologist (OB/GYN)</option>
+                                    <option>Surgeon</option>
+                                    <option>Psychiatrist</option>
+                                    <option>Cardiologist</option>
+                                    <option>Dermatologist</option>
+                                    <option>Endocrinologist</option>
+                                    <option>Gastroenterologist</option>
+                                    <option>Nephrologist</option>
+                                    <option>Ophthalmologist</option>
                                 </Form.Control>
                             </Form.Group>
 
