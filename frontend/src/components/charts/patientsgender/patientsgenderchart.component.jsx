@@ -7,27 +7,34 @@ class PatientsgenderchartComponent extends React.Component {
         super();
 
         this.state = {
-            chartData: {
+            patients: [],
+
+            male:0,
+            female:0
+        }
+    }
+
+    generateChartData = () => {
+        return (
+            {
                 labels: ['Male', 'Female'],
                 datasets: [
                     {
                         label: 'gender patients',
                         data: [
-                            81,
-                            19
+                            60,
+                            40
                         ],
                         backgroundColor: [
                             '#33691e',
                             '#ff9800',
-
                         ],
-                        borderColor: [
-                        ],
+                        borderColor: [],
                         borderWidth: 0
                     }
                 ]
             }
-        }
+        )
     }
 
     render() {
@@ -38,7 +45,7 @@ class PatientsgenderchartComponent extends React.Component {
                     <div className="alert alert-primary" role="alert">
                         <h4>gender patients</h4>
                         <Pie
-                            data={this.state.chartData}
+                            data={this.generateChartData}
                             options={{
                                 title: {
                                     display: true,
