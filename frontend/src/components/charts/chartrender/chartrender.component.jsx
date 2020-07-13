@@ -1,5 +1,6 @@
 import React from "react";
 import {Tabs, Tab} from "react-bootstrap";
+import style from './chartrender.module.css'
 import DoctorproficiencychartComponent from "../doctorproficiency/doctorproficiencychart.component";
 import MostpopulardiseaseschartComponent from "../mostpopulardiseases/mostpopulardiseaseschart.component";
 import PatientsgenderchartComponent from "../patientsgender/patientsgenderchart.component";
@@ -11,11 +12,11 @@ class ChartrenderComponent extends React.Component {
         return (
             <div className="container" style={{marginTop: '5rem'}}>
 
-                <div className="alert alert-danger" role="alert">
+                <div className="alert" role="alert" className={style.alertStyle}>
 
-                    <Tabs defaultActiveKey="profile">
+                    <Tabs defaultActiveKey="profile"  >
 
-                        <Tab eventKey="doctorproficiency" title="Doctor Proficiency">
+                        <Tab eventKey="doctorproficiency" title="Doctor Proficiency" >
                             <div>
                                 <DoctorproficiencychartComponent/>
                             </div>
@@ -27,7 +28,7 @@ class ChartrenderComponent extends React.Component {
                             </div>
                         </Tab>
 
-                        <Tab eventKey="patientsgender" title="Patients vs Gender">
+                        <Tab eventKey="patientsgender" title="Gender Analysis">
                             <div>
                                 <PatientsgenderchartComponent/>
                             </div>
