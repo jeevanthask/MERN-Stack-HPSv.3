@@ -55,7 +55,7 @@ class AddpatientComponent extends React.Component {
 
     onChangeDisease = (e) => {
         this.setState({
-            disease:this.state.disease
+            disease:e.target.value
         })
     }
 
