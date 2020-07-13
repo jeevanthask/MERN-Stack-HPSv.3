@@ -82,10 +82,8 @@ class DoctorproficiencychartComponent extends React.Component {
 
     processMaximumSpeciality = () => {
 
-        let count = this.state.doctors.length
-        console.log(count)
-
         for (let i = 0; i < this.state.doctors.length; i++) {
+
             console.log(this.state.doctors[i].speciality)
             switch (this.state.doctors[i].speciality) {
 
