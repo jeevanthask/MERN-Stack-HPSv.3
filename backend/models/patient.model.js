@@ -10,6 +10,9 @@ let Patient = new Schema({
     },
     email: {
         type: String
+    },
+    gender:{
+        type:String
     }
 });
 

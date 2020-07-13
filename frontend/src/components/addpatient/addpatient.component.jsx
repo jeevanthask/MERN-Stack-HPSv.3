@@ -11,7 +11,8 @@ class AddpatientComponent extends React.Component {
             show: false,
             firstname:'',
             lastname:'',
-            email:''
+            email:'',
+            gender:''
         }
     }
 
@@ -45,6 +46,12 @@ class AddpatientComponent extends React.Component {
         })
     }
 
+    onChangeGender = (e) =>{
+        this.setState({
+            gender:e.target.value
+        })
+    }
+
     onSubmit = (e) => {
         e.preventDefault()
 
@@ -55,7 +62,8 @@ class AddpatientComponent extends React.Component {
         const newPatient = {
             firstname: this.state.firstname,
             lastname: this.state.lastname,
-            email:this.state.email
+            email:this.state.email,
+            gender:this.state.gender
         }
 
         axios.post('http://localhost:4000/HPSvthree/admin/addpatient',newPatient)
@@ -64,7 +72,8 @@ class AddpatientComponent extends React.Component {
         this.setState({
             firstname:'',
             lastname:'',
-            email:''
+            email:'',
+            gender:''
         })
 
     }
@@ -98,6 +107,15 @@ class AddpatientComponent extends React.Component {
                             <Form.Group>
                                 <Form.Label>Email</Form.Label>
                                 <Form.Control type="email" onChange = {this.onChangeEmail}/>
+                            </Form.Group>
+
+                            <Form.Group>
+                                <Form.Label>Gender</Form.Label>
+                                <Form.Control as="select" defaultValue="Choose..." onChange={this.onChangeGender}>
+                                    <option>Choose...</option>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                </Form.Control>
                             </Form.Group>
 
                             <Modal.Footer>

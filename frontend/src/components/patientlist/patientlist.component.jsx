@@ -2,7 +2,6 @@ import React from "react";
 import axios from 'axios'
 import {Table} from "react-bootstrap";
 import {Link} from "react-router-dom";
-import DoctorsearchComponent from "../specificsearch/doctorsearch/doctorsearch.component";
 import PatientsearchComponent from "../specificsearch/patientsearch/patientsearch.component";
 
 class PatientlistComponent extends React.Component {
@@ -42,6 +41,7 @@ class PatientlistComponent extends React.Component {
                     <td>{currentpatient.firstname}</td>
                     <td>{currentpatient.lastname}</td>
                     <td>{currentpatient.email}</td>
+                    <td>{currentpatient.gender}</td>
                     <td><Link to={"/admin/updatepatient/" + currentpatient._id}><i
                         className="fa fa-pencil-square-o btn btn-primary" aria-hidden="true"></i></Link></td>
                     <td>
@@ -71,6 +71,7 @@ class PatientlistComponent extends React.Component {
                             <th>First Name</th>
                             <th>Last Name</th>
                             <th>Email</th>
+                            <th>Gender</th>
                             <th>Edit</th>
                             <th>Delete</th>
                         </tr>

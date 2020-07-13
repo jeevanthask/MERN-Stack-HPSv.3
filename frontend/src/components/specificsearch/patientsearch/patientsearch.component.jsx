@@ -78,6 +78,7 @@ class PatientsearchComponent extends React.Component {
                             <ListGroup.Item>First Name : {this.state.searchresults.firstname}</ListGroup.Item>
                             <ListGroup.Item>Last Name : {this.state.searchresults.lastname}</ListGroup.Item>
                             <ListGroup.Item>Email : {this.state.searchresults.email}</ListGroup.Item>
+                            <ListGroup.Item>Gender : {this.state.searchresults.gender}</ListGroup.Item>
                         </ListGroup>
 
                     </Modal.Body>
