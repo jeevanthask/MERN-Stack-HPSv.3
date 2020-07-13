@@ -12,7 +12,8 @@ class UpdatepatientComponent extends React.Component {
             firstname: '',
             lastname: '',
             email: '',
-            gender:''
+            gender:'',
+            disease:''
         }
     }
 
@@ -41,13 +42,20 @@ class UpdatepatientComponent extends React.Component {
         })
     }
 
+    onChangeDisease = (e) => {
+        this.setState({
+            disease:e.target.value
+        })
+    }
+
     componentDidMount() {
         axios.get('http://localhost:4000/HPSvthree/admin/getpatient/' + this.props.match.params.id)
             .then(response => {
                 this.setState({
                     firstname: response.data.firstname,
                     lastname: response.data.lastname,
-                    email:response.data.email
+                    email:response.data.email,
+                    disease:response.data.disease
                 })
             })
             .catch(function (error) {
@@ -67,7 +75,8 @@ class UpdatepatientComponent extends React.Component {
             firstname: this.state.firstname,
             lastname: this.state.lastname,
             email: this.state.email,
-            gender: this.state.gender
+            gender: this.state.gender,
+            disease:this.state.disease
         }
 
         axios.post('http://localhost:4000/HPSvthree/admin/updatepatient/' + this.props.match.params.id, newPatient)
@@ -77,7 +86,8 @@ class UpdatepatientComponent extends React.Component {
             firstname: '',
             lastname: '',
             email: '',
-            gender:''
+            gender:'',
+            disease:''
         })
 
     }
@@ -105,9 +115,20 @@ class UpdatepatientComponent extends React.Component {
                     <Form.Group>
                         <Form.Label>Gender</Form.Label>
                         <Form.Control className={style.selectstyle} as="select" defaultValue="Choose..." onChange={this.onChangeGender}>
-                            <option>Choose...</option>
                             <option>Male</option>
                             <option>Female</option>
+                        </Form.Control>
+                    </Form.Group>
+
+                    <Form.Group>
+                        <Form.Label>Disease</Form.Label>
+                        <Form.Control className={style.selectstyle} as="select" defaultValue="Choose..." onChange={this.onChangeDisease}><option>Choose...</option>
+                            <option>Allergies</option>
+                            <option>Colds and Flu</option>
+                            <option>Conjunctivitis</option>
+                            <option>Diarrhea</option>
+                            <option>Headaches</option>
+                            <option>Stomach Aches</option>
                         </Form.Control>
                     </Form.Group>
 

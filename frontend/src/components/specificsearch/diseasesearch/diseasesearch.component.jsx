@@ -78,7 +78,6 @@ class DiseasesearchComponent extends React.Component {
                             <ListGroup.Item>First Name : {this.state.searchresults.firstname}</ListGroup.Item>
                             <ListGroup.Item>Last Name : {this.state.searchresults.lastname}</ListGroup.Item>
                             <ListGroup.Item>Description : {this.state.searchresults.description}</ListGroup.Item>
-                            <ListGroup.Item>Description : {this.state.searchresults.disease}</ListGroup.Item>
                         </ListGroup>
 
                     </Modal.Body>
