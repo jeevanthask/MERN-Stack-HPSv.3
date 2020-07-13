@@ -67,8 +67,8 @@ class PatientsgenderchartComponent extends React.Component {
                             this.state.female
                         ],
                         backgroundColor: [
-                            '#33691e',
-                            '#ff9800',
+                            '#E91E63',
+                            '#FFFF00',
                         ],
                         borderColor: [],
                         borderWidth: 0
@@ -85,7 +85,7 @@ class PatientsgenderchartComponent extends React.Component {
                 <div className="text-center p-3">
 
                     <div className="alert alert-primary" role="alert">
-                        <h4>gender patients</h4>
+                        <h4>Gender Analyse</h4>
                         <Pie
                             data={this.generateChartData}
                             options={{
@@ -102,7 +102,7 @@ class PatientsgenderchartComponent extends React.Component {
                                     yAxes: [{
                                         scaleLabel: {
                                             display: true,
-                                            labelString: 'calculated in percentage %'
+                                            labelString: 'value'
                                         }
                                     }],
                                     xAxes: [{
