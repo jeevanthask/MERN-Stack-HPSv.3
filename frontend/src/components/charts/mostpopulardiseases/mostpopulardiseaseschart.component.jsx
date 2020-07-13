@@ -36,7 +36,6 @@ class MostpopulardiseaseschartComponent extends React.Component {
 
         for (let i = 0; i < this.state.patients.length; i++) {
 
-            console.log(this.state.patients[i].disease)
             switch (this.state.patients[i].disease) {
 
                 case "Allergies":
@@ -113,7 +112,7 @@ class MostpopulardiseaseschartComponent extends React.Component {
 
                         <h4>Most Popular Disesases</h4>
 
-                        <Polar
+                        <Doughnut
                             data={this.generateChartData()}
                             options={{
                                 title: {
