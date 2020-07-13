@@ -1,5 +1,5 @@
 import React from 'react'
-import {Bar, Bubble, Line, Pie, Polar, Radar} from 'react-chartjs-2';
+import {Bar, Bubble, HorizontalBar, Line, Pie, Polar, Radar} from 'react-chartjs-2';
 import axios from "axios";
 
 class DoctorproficiencychartComponent extends React.Component {
@@ -64,10 +64,10 @@ class DoctorproficiencychartComponent extends React.Component {
                             '#ff6d00',
                             '#33691e',
                             '#0091ea',
-                            '#76ff03',
-                            '#f50057',
-                            '#ff6d00',
-                            '#33691e',
+                            '#B71C1C',
+                            '#7B1FA2',
+                            '#FFFF00',
+                            '#5D4037',
                             '#0091ea',
                             '#76ff03'
                         ],
@@ -158,7 +158,7 @@ class DoctorproficiencychartComponent extends React.Component {
                 <div className="text-center p-3">
                     <div className="alert alert-success" role="alert">
                         <h4>Doctor Proficiency</h4>
-                        <Bar
+                        <Polar
                             data={this.generateChartData()}
                             options={{
                                 title: {
