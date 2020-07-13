@@ -12,7 +12,8 @@ class AddpatientComponent extends React.Component {
             firstname:'',
             lastname:'',
             email:'',
-            gender:''
+            gender:'',
+            disease:''
         }
     }
 
@@ -52,6 +53,12 @@ class AddpatientComponent extends React.Component {
         })
     }
 
+    onChangeDisease = (e) => {
+        this.setState({
+            disease:this.state.disease
+        })
+    }
+
     onSubmit = (e) => {
         e.preventDefault()
 
@@ -63,7 +70,8 @@ class AddpatientComponent extends React.Component {
             firstname: this.state.firstname,
             lastname: this.state.lastname,
             email:this.state.email,
-            gender:this.state.gender
+            gender:this.state.gender,
+            disease:this.state.disease
         }
 
         axios.post('http://localhost:4000/HPSvthree/admin/addpatient',newPatient)
@@ -73,7 +81,8 @@ class AddpatientComponent extends React.Component {
             firstname:'',
             lastname:'',
             email:'',
-            gender:''
+            gender:'',
+            disease:''
         })
 
     }
@@ -115,6 +124,19 @@ class AddpatientComponent extends React.Component {
                                     <option>Choose...</option>
                                     <option>Male</option>
                                     <option>Female</option>
+                                </Form.Control>
+                            </Form.Group>
+
+                            <Form.Group>
+                                <Form.Label>Disease</Form.Label>
+                                <Form.Control as="select" defaultValue="Choose..." onChange={this.onChangeDisease}>
+                                    <option>Choose...</option>
+                                    <option>Allergies</option>
+                                    <option>Colds and Flu</option>
+                                    <option>Conjunctivitis</option>
+                                    <option>Diarrhea</option>
+                                    <option>Headaches</option>
+                                    <option>Stomach Aches</option>
                                 </Form.Control>
                             </Form.Group>
 

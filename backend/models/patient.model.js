@@ -13,6 +13,9 @@ let Patient = new Schema({
     },
     gender:{
         type:String
+    },
+    disease:{
+        type:String
     }
 });
 
