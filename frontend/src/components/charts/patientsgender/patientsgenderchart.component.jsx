@@ -46,9 +46,6 @@ class PatientsgenderchartComponent extends React.Component {
                         female: ++this.state.female
                     })
                     break;
-
-
-
             }
         }
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import {Bubble, Doughnut, Polar} from 'react-chartjs-2';
 import {Form} from "react-bootstrap";
+import axios from "axios";
 
 class MostpopulardiseaseschartComponent extends React.Component {
 
@@ -18,6 +19,60 @@ class MostpopulardiseaseschartComponent extends React.Component {
         }
     }
 
+    componentDidMount() {
+        axios.get('http://localhost:4000/HPSvthree/admin/getpatients')
+            .then(response => {
+                this.setState({
+                    patients: response.data
+                })
+            })
+            .catch(function (error) {
+                console.log(error);
+            })
+
+    }
+
+    processMaximumSpeciality = () => {
+
+        for (let i = 0; i < this.state.patients.length; i++) {
+
+            console.log(this.state.patients[i].disease)
+            switch (this.state.patients[i].disease) {
+
+                case "Allergies":
+                    this.setState({
+                        Allergies: ++this.state.Allergies
+                    })
+                    break;
+
+                case "Colds and Flu":
+                    this.setState({
+                        ColdsandFlu: ++this.state.ColdsandFlu
+                    })
+                    break;
+
+                case "Conjunctivitis":
+                    this.setState({
+                        Conjunctivitis: ++this.state.Conjunctivitis
+                    })
+                    break;
+
+                case "Diarrhea":
+                    this.setState({
+                        Diarrhea: ++this.state.Diarrhea
+                    })
+                    break;
+
+                case "Headaches":
+                    this.setState({
+                        Headaches: ++this.state.Headaches
+                    })
+                    break;
+            }
+        }
+
+    }
+
     generateChartData = () => {
         return (
             {
@@ -26,9 +81,11 @@ class MostpopulardiseaseschartComponent extends React.Component {
                     {
                         label: 'symptoms cha later',
                         data: [
-                            81,
-                            19,
-                            34, 45, 80
+                            this.state.Allergies,
+                            this.state.ColdsandFlu,
+                            this.state.Conjunctivitis,
+                            this.state.Diarrhea,
+                            this.state.Headaches
                         ],
                         backgroundColor: [
                             '#33691e',
@@ -85,6 +142,14 @@ class MostpopulardiseaseschartComponent extends React.Component {
 
                             }}
                         />
+
+                        <div className="row" style={{marginTop: '1rem'}}>
+                            <div className="col-md-12">
+                                <button className="btn btn-primary" onClick={this.processMaximumSpeciality}>Process
+                                </button>
+                            </div>
+                        </div>
+
                     </div>
 
                 </div>
