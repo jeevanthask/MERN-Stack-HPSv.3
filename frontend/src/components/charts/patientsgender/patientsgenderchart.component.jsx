@@ -1,5 +1,6 @@
 import React from 'react'
 import {Pie} from 'react-chartjs-2';
+import axios from "axios";
 
 class PatientsgenderchartComponent extends React.Component {
 
@@ -14,6 +15,46 @@ class PatientsgenderchartComponent extends React.Component {
         }
     }
 
+    componentDidMount() {
+        axios.get('http://localhost:4000/HPSvthree/admin/getpatients')
+            .then(response => {
+                this.setState({
+                    patients: response.data
+                })
+            })
+            .catch(function (error) {
+                console.log(error);
+            })
+
+    }
+
+    processMaximumSpeciality = () => {
+
+        for (let i = 0; i < this.state.patients.length; i++) {
+
+            console.log(this.state.patients[i].gender)
+            switch (this.state.patients[i].gender) {
+
+                case "Male":
+                    this.setState({
+                        male: ++this.state.male
+                    })
+                    break;
+
+                case "Female":
+                    this.setState({
+                        female: ++this.state.female
+                    })
+                    break;
+
+
+
+            }
+        }
+
+    }
+
+
     generateChartData = () => {
         return (
             {
@@ -22,8 +63,8 @@ class PatientsgenderchartComponent extends React.Component {
                     {
                         label: 'gender patients',
                         data: [
-                            60,
-                            40
+                            this.state.male,
+                            this.state.female
                         ],
                         backgroundColor: [
                             '#33691e',
@@ -36,6 +77,7 @@ class PatientsgenderchartComponent extends React.Component {
             }
         )
     }
+
 
     render() {
         return (
@@ -73,6 +115,14 @@ class PatientsgenderchartComponent extends React.Component {
 
                             }}
                         />
+
+                        <div className="row" style={{marginTop: '1rem'}}>
+                            <div className="col-md-12">
+                                <button className="btn btn-primary" onClick={this.processMaximumSpeciality}>Process
+                                </button>
+                            </div>
+                        </div>
+
                     </div>
 
                 </div>
