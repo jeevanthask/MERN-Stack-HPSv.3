@@ -1,5 +1,6 @@
 import React from 'react'
 import {Doughnut} from 'react-chartjs-2';
+import axios from "axios";
 
 class PopularsymptomschartComponent extends React.Component {
 
@@ -7,27 +8,99 @@ class PopularsymptomschartComponent extends React.Component {
         super();
 
         this.state = {
-            chartData: {
-                labels: ['Male', 'Female'],
+            symptoms: [],
+
+            Flu: 0,
+            AbdominalPain: 0,
+            ArmPain: 4,
+            BackPain: 5,
+            BodyAches: 0
+        }
+    }
+
+    componentDidMount() {
+        axios.get('http://localhost:4000/HPSvthree/admin/getsymptoms')
+            .then(response => {
+                this.setState({
+                    patients: response.data
+                })
+            })
+            .catch(function (error) {
+                console.log(error);
+            })
+
+    }
+
+    processMaximumSpeciality = () => {
+
+        for (let i = 0; i < this.state.symptoms.length; i++) {
+
+            switch (this.state.symptoms[i].fistname) {
+
+                case "Flu":
+                    this.setState({
+                        Flu: ++this.state.Flu
+                    })
+                    break;
+
+                case "AbdominalPain":
+                    this.setState({
+                        AbdominalPain: ++this.state.AbdominalPain
+                    })
+                    break;
+
+                case "Arm Pain":
+                    this.setState({
+                        ArmPain: ++this.state.ArmPain
+                    })
+                    break;
+
+                case "Back Pain":
+                    this.setState({
+                        BackPain: ++this.state.BackPain
+                    })
+                    break;
+
+                case "Body Aches":
+                    this.setState({
+                        BodyAches: ++this.state.BodyAches
+                    })
+                    break;
+            }
+        }
+
+    }
+
+
+    getChartData = () => {
+        return (
+            {
+                labels: ['Flu', 'Abdominal Pain','Arm Pain','Back Pain','Body Aches'],
                 datasets: [
                     {
                         label: 'symptoms cha later',
                         data: [
-                            81,
-                            19
+                            this.state.Flu,
+                            this.state.AbdominalPain,
+                            this.state.ArmPain,
+                            this.state.BackPain,
+                            this.state.BodyAches
                         ],
                         backgroundColor: [
                             '#33691e',
                             '#ff9800',
+                            '#0091ea',
+                            '#76ff03',
+                            '#f50057'
+
 
                         ],
-                        borderColor: [
-                        ],
+                        borderColor: [],
                         borderWidth: 0
                     }
                 ]
             }
-        }
+        )
     }
 
     render() {
@@ -37,10 +110,10 @@ class PopularsymptomschartComponent extends React.Component {
 
                     <div className="alert alert-primary" role="alert">
 
-                        <h4>Disesases later</h4>
+                        <h4>Symptoms Analysis</h4>
 
                         <Doughnut
-                            data={this.state.chartData}
+                            data={this.getChartData()}
                             options={{
                                 title: {
                                     display: true,
