@@ -12,8 +12,8 @@ class PopularsymptomschartComponent extends React.Component {
 
             Flu: 0,
             AbdominalPain: 0,
-            ArmPain: 4,
-            BackPain: 5,
+            ArmPain: 0,
+            BackPain: 0,
             BodyAches: 0
         }
     }
@@ -22,7 +22,7 @@ class PopularsymptomschartComponent extends React.Component {
         axios.get('http://localhost:4000/HPSvthree/admin/getsymptoms')
             .then(response => {
                 this.setState({
-                    patients: response.data
+                    symptoms: response.data
                 })
             })
             .catch(function (error) {
@@ -35,7 +35,7 @@ class PopularsymptomschartComponent extends React.Component {
 
         for (let i = 0; i < this.state.symptoms.length; i++) {
 
-            switch (this.state.symptoms[i].fistname) {
+            switch (this.state.symptoms[i].firstname) {
 
                 case "Flu":
                     this.setState({
@@ -43,25 +43,25 @@ class PopularsymptomschartComponent extends React.Component {
                     })
                     break;
 
-                case "AbdominalPain":
+                case "Abdominal":
                     this.setState({
                         AbdominalPain: ++this.state.AbdominalPain
                     })
                     break;
 
-                case "Arm Pain":
+                case "Arm":
                     this.setState({
                         ArmPain: ++this.state.ArmPain
                     })
                     break;
 
-                case "Back Pain":
+                case "Back":
                     this.setState({
                         BackPain: ++this.state.BackPain
                     })
                     break;
 
-                case "Body Aches":
+                case "Body":
                     this.setState({
                         BodyAches: ++this.state.BodyAches
                     })
@@ -141,6 +141,14 @@ class PopularsymptomschartComponent extends React.Component {
 
                             }}
                         />
+
+                        <div className="row" style={{marginTop: '1rem'}}>
+                            <div className="col-md-12">
+                                <button className="btn btn-primary" onClick={this.processMaximumSpeciality}>Process
+                                </button>
+                            </div>
+                        </div>
+
                     </div>
 
                 </div>
