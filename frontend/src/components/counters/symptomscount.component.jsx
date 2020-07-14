@@ -1,12 +1,28 @@
 import React from "react";
 import CountUp from 'react-countup';
 import {Card} from "react-bootstrap";
+import axios from "axios";
 
 class SymptomscountComponent extends React.Component {
 
     constructor() {
         super();
-        this.state = {}
+        this.state = {
+            symptoms:[]
+        }
+    }
+
+    componentDidMount() {
+        axios.get('http://localhost:4000/HPSvthree/admin/getsymptoms')
+            .then(response => {
+                this.setState({
+                    symptoms: response.data
+                })
+            })
+            .catch(function (error) {
+                console.log(error);
+            })
+
     }
 
     render() {
@@ -19,7 +35,7 @@ class SymptomscountComponent extends React.Component {
                     <Card.Body>
                         <Card.Title className="text-center">
                             <CountUp start={0}
-                                     end={50}
+                                     end={this.state.symptoms.length}
                                      duration={15} separator=","
                             />
                         </Card.Title>
