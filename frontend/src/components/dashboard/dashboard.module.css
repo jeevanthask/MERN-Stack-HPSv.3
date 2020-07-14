@@ -1,7 +1,12 @@
-.buttonstyle{
+.buttonstyle {
     width: 12rem;
     margin-left: 2rem;
     margin-top: 1rem;
 }
 
+
+.buttonpannel {
+    background-color: #FFC107;
+    padding: 1rem;
+}
 

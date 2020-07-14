@@ -6,7 +6,7 @@ import SymptomscountComponent from "./symptomscount.component";
 class CountersComponent extends React.Component {
     render() {
         return (
-            <div className="container">
+            <div className="container" style={{marginBottom:'2rem'}}>
                 <div className="row">
 
                     <div className="col-md-4 ">

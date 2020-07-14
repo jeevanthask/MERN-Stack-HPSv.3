@@ -72,7 +72,7 @@ class AdddiseaseComponent extends React.Component {
     render() {
         return (
             <div>
-                <Button variant="primary" size="lg" className={style.buttonstyle} onClick={this.handleShow}>
+                <Button variant="danger" className={style.buttonstyle} onClick={this.handleShow}>
                     Add Disease
                 </Button>
 

@@ -1,8 +1,9 @@
-.headingspan{
+.headingspan {
 
     padding: 30px;
     text-align: center;
-    color: #E65100;
+    color: black;
+    font-weight: bold;
     font-size: 2rem;
 
     display: inline-block;
