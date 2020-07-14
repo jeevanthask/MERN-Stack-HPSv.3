@@ -134,7 +134,7 @@ class MostpopulardiseaseschartComponent extends React.Component {
                                     xAxes: [{
                                         scaleLabel: {
                                             display: true,
-                                            labelString: 'Gender'
+                                            labelString: 'Diseases'
                                         }
                                     }]
                                 }

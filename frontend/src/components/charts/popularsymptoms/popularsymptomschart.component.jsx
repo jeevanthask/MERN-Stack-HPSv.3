@@ -1,5 +1,5 @@
 import React from 'react'
-import {Doughnut} from 'react-chartjs-2';
+import {Bar, Bubble, Doughnut, Line, Polar, Radar, Scatter} from 'react-chartjs-2';
 import axios from "axios";
 
 class PopularsymptomschartComponent extends React.Component {
@@ -112,7 +112,7 @@ class PopularsymptomschartComponent extends React.Component {
 
                         <h4>Symptoms Analysis</h4>
 
-                        <Doughnut
+                        <Line
                             data={this.getChartData()}
                             options={{
                                 title: {
@@ -128,13 +128,13 @@ class PopularsymptomschartComponent extends React.Component {
                                     yAxes: [{
                                         scaleLabel: {
                                             display: true,
-                                            labelString: 'calculated in percentage %'
+                                            labelString: 'calculated in quantity'
                                         }
                                     }],
                                     xAxes: [{
                                         scaleLabel: {
                                             display: true,
-                                            labelString: 'Gender'
+                                            labelString: 'Symptoms'
                                         }
                                     }]
                                 }
