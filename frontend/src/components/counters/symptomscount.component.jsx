@@ -30,7 +30,7 @@ class SymptomscountComponent extends React.Component {
         return (
             <div className="container">
 
-                <Card bg="primary" border="primary" style={{width: '18rem'}}>
+                <Card bg="danger" border="danger" style={{width: '18rem'}}>
                     <Card.Header className="text-center"><h5>Symptoms Count</h5></Card.Header>
                     <Card.Body>
                         <Card.Title className="text-center">

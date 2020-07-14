@@ -29,7 +29,7 @@ class DoctorcounterComponent extends React.Component {
         return (
             <div className="container">
 
-                <Card bg="primary" border="primary" style={{width: '18rem'}}>
+                <Card bg="warning" border="warning" style={{width: '18rem'}}>
                     <Card.Header className="text-center"><h5>Doctors Count</h5></Card.Header>
                     <Card.Body>
                         <Card.Title className="text-center">
