@@ -72,7 +72,7 @@ class AddsymptomComponent extends React.Component {
     render() {
         return (
             <div>
-                <Button variant="primary" className={style.buttonstyle} onClick={this.handleShow}>
+                <Button size="lg" variant="primary" className={style.buttonstyle} onClick={this.handleShow}>
                     Add Symptom
                 </Button>
 

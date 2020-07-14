@@ -88,7 +88,7 @@ class DashboardComponent extends React.Component {
                             </div>
                             <div className="row">
                                 <div className="col-md-12">
-                                    <Button variant="primary" className={style.buttonstyle}
+                                    <Button size="lg" variant="primary" className={style.buttonstyle}
                                             onClick={this.handlePatientList}>
                                         Patient List
                                     </Button>
@@ -96,7 +96,7 @@ class DashboardComponent extends React.Component {
                             </div>
                             <div className="row">
                                 <div className="col-md-12">
-                                    <Button variant="primary" className={style.buttonstyle}
+                                    <Button size="lg" variant="primary" className={style.buttonstyle}
                                             onClick={this.handleSearchPatient}>
                                         Search Patient
                                     </Button>
@@ -113,7 +113,7 @@ class DashboardComponent extends React.Component {
                             </div>
                             <div className="row">
                                 <div className="col-md-12">
-                                    <Button variant="primary" className={style.buttonstyle}
+                                    <Button size="lg" variant="primary" className={style.buttonstyle}
                                             onClick={this.handleDoctorList}>
                                         Doctor List
                                     </Button>
@@ -121,7 +121,7 @@ class DashboardComponent extends React.Component {
                             </div>
                             <div className="row">
                                 <div className="col-md-12">
-                                    <Button variant="primary" className={style.buttonstyle}
+                                    <Button size="lg" variant="primary" className={style.buttonstyle}
                                             onClick={this.handleSearchDoctor}>
                                         Search Doctor
                                     </Button>
@@ -139,7 +139,7 @@ class DashboardComponent extends React.Component {
                             </div>
                             <div className="row">
                                 <div className="col-md-12">
-                                    <Button variant="primary" className={style.buttonstyle}
+                                    <Button size="lg" variant="primary" className={style.buttonstyle}
                                             onClick={this.handleSymptomList}>
                                         Symptom List
                                     </Button>
@@ -147,7 +147,7 @@ class DashboardComponent extends React.Component {
                             </div>
                             <div className="row">
                                 <div className="col-md-12">
-                                    <Button variant="primary" className={style.buttonstyle}
+                                    <Button size="lg" variant="primary" className={style.buttonstyle}
                                             onClick={this.handleSearchSymptom}>
                                         Search Symptom
                                     </Button>
@@ -164,7 +164,7 @@ class DashboardComponent extends React.Component {
                             </div>
                             <div className="row">
                                 <div className="col-md-12">
-                                    <Button variant="primary" className={style.buttonstyle}
+                                    <Button size="lg" variant="primary" className={style.buttonstyle}
                                             onClick={this.handleDiseaseList}>
                                         Disease List
                                     </Button>

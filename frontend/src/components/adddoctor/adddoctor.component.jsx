@@ -83,9 +83,11 @@ class AdddoctorComponent extends React.Component {
     render() {
         return (
             <div>
-                <Button variant="primary" className={style.buttonstyle} onClick={this.handleShow}>
+                <Button variant="primary" size="lg" className={style.buttonstyle} onClick={this.handleShow}>
                     Add Doctor
                 </Button>
+
+
 
                 <Modal show={this.state.show} onHide={this.handleClose}>
 

@@ -1,4 +1,5 @@
 import React from 'react'
+import {Button} from "react-bootstrap";
 import {Bar, Bubble, HorizontalBar, Line, Pie, Polar, Radar} from 'react-chartjs-2';
 import axios from "axios";
 
@@ -177,8 +178,8 @@ class DoctorproficiencychartComponent extends React.Component {
 
                         <div className="row" style={{marginTop: '1rem'}}>
                             <div className="col-md-12">
-                                <button className="btn btn-primary" onClick={this.processMaximumSpeciality}>Process
-                                </button>
+                                <Button variant="primary" onClick={this.processMaximumSpeciality}>Process
+                                </Button>
                             </div>
                         </div>
 
